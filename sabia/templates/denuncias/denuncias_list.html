@@ -1,0 +1,122 @@
+{% extends "administracion/usuarios/plantilla_tablas.html" %}
+{% load static %}
+<h2>{% block tema %}</h2>
+Detalle Usuario 
+ {% endblock tema %}
+ {% block title %}Perfil de Usuario  {% endblock title  %} 
+
+<body>
+    <!-- <h1>PAgina de denuncias</h1>
+    <hr>
+    <li><a href="{%  url 'denuncias_registrar' %}">Registrar Denuncias</a></li>
+    <li><a href="{% url 'pagina' %}">dashboard</a></li>
+    <br>
+    <hr> -->
+    {% block tablas %}
+
+
+    {% block tr %}
+    <th scope="col">#</th>
+    <th scope="col">Codigo</th>
+    <th scope="col">Imagen</th>
+    <th scope="col">Denunciante</th>
+    <th scope="col">contacto</th>
+    <th scope="col">estado</th>
+    <th scope="col">Opciones</th>
+    {% endblock tr %}
+   
+
+    {% block tbody %}
+    <tr>
+        {% for i in object_list %}
+        <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{i.id}}</td>
+
+     
+                {% if i.imagen %}
+                <td class="col-lg-4 mb-4 ">
+                  <img src="/media/{{i.imagen }}" alt="{{i.imagen }}"  style="width: 40%;margin-left: 35%;" >
+                           
+                  {% else %}
+                  <img class="img-fluid rounded-top" src="{% static 'img/albergue1.png ' %}"    style="width: 40%;" alt="">
+                  {% endif %}
+            
+            
+            </td>
+            <td>{{i.nombres}} {{i.apellidos}}</td>
+            <td>{{i.telefono}}</td>
+            <td>{{i.estado}}</td>
+            <td>
+                
+                
+                
+           
+            
+                <a href="{% url 'denuncias_detalle' i.id %}" class="btn btn-warning btn-icon-split">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-file-alt "></i>
+                    </span>
+                    <span class="text">Detalle </span>
+                </a>
+                <div class="my-2">
+                    
+                </div>
+                <a href="{% url 'denuncias_eliminar' i.id %}"class="btn btn-danger btn-icon-split">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-trash"></i>
+                    </span>
+                    <span class="text">Eliminar</span>
+                </a>
+            
+            
+            
+            </td>
+        </tr>
+        {% endfor %}
+
+       {% if user.is_superuser %}
+       {% else %}
+       {% endif %}
+   </tr>
+   
+    {% endblock tbody  %}
+    {% endblock tablas %}
+
+
+    <!-- <div class="container">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Denunciante</th>
+                    <th scope="col">contacto</th>
+                    <th scope="col">estado</th>
+                    <th scope="col">Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in object_list %}
+                <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td>{{i.id}}</td>
+                    <td>{{i.imagen}}</td>
+                    <td>{{i.nombres}} {{i.apellidos}}</td>
+                    <td>{{i.telefono}}</td>
+                    <td>{{i.estado}}</td>
+                    <td><a href="{% url 'denuncias_detalle' i.id %}">ver detalle</a></td>
+                </tr>
+                {% endfor %}
+                    
+            </tbody>
+        </table>
+    </div> -->
+</body>
+
+    
+
+
+
+

@@ -1,0 +1,232 @@
+{% extends "base/base.html" %}
+{% block titulo %} Denuncias {% endblock %}
+
+{% load static %}
+
+
+
+{% block contenido %}
+
+<link rel="stylesheet" href="{% static 'css/denun1.css' %}">
+
+<body>
+   
+ <!-- Hero Start -->
+ <div class="container-fluid color1 py-5  mb-5">
+    <div class="row py-3" >
+        <div class="col-12 text-center">
+            <h1 class="display-3 text-white animated zoomIn">Denuncias</h1>
+            <!-- <a href="" class="h4 text-white">Accion </a>
+            <i class="far fa-circle text-white px-2"></i>
+            <a href="" class="h4 text-white">Latacunga</a> -->
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+ <!-- Service Start -->
+ <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row g-5 mb-5">
+            <div class="col-lg-5 wow zoomIn" data-wow-delay="0.3s" style="min-height: 400px;">
+               
+                    <div class="position-relative color2 rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-4">
+                        <h3 class="text-white mb-3">Recepcion de Denuncias </h3>
+                        <p class="text-white mb-3">Por maltrato Animal </p>
+                            <p class="text-white mb-3">Todos los dias de 8:30 a 16:30 </p>
+                        <h2 class="text-white mb-0">+593 0998530277</h2>
+                        <h2 class="text-white mb-0">   3952-300 ext. 24131.</h2>
+
+                    </div>
+               
+            </div>
+            <div class="col-lg-7">
+                <div class="section-title mb-5">
+                  
+                    <h1 class="display-5 mb-0" style="text-align: center;">Denuncia Ciudadana </h1>
+                </div>
+                <div class="row g-5">
+                    <div class="col-md-6 service-item wow zoomIn" data-wow-delay="0.6s">
+                        <div class="rounded-top overflow-hidden">
+
+                            <a href="https://latacunga.gob.ec/images/pdf/Ordenanzas/1_99_ordenanza_regula_transito_cuidado_tenencia_manejo_responsables_perros_gatos.pdf" target="blank">
+                                
+                            <img class="img-fluid" src="{% static 'img/logogad.png ' %}"  alt="SABIA">
+
+                        </a>
+                        </div>
+                        <div class="position-relative color1 rounded-bottom text-center p-4" style="margin-top: 5%;">
+                            <h5 class="m-0 " style="color:white">Ordenaza Municpales </h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                        <div class="rounded-top overflow-hidden">
+
+                          <a href="{% url 'denuncias_registrar' %}">
+
+                            <img class="img-fluid" src="{% static 'img/maltrato.jpg ' %}"  alt="SABIA">
+
+                          </a>
+
+
+                         
+                        </div>
+                        <div class="position-relative color1 rounded-bottom text-center p-4" style="margin-top: 5%;">
+                            <h5 class="m-0 " style="color:white">Reportar Violencia </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+<!-- Service End -->
+
+
+  <!-- Titulo de la seccion  -->
+<div class="row" style="background-color: white;">
+    <div class="col-md-12 heading" style="padding-left: 5%;padding-top: 2%;">
+        <span class="title-icon pull-left"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
+        <h2 class="title">Como Denunciar el Maltrato Animal   <span class="title-desc"> Aqui algunas recomendaciones  </span></h2>
+    </div>
+  </div><!--fin del titulo  -->  
+  
+  
+    <!-- partial:index.partial.html -->
+    <section class="ps-timeline-sec">
+      <div class="container">
+        <ol class="ps-timeline">
+          <li>
+            <div class="img-handler-top">
+                <!-- <img class="img-fluid" src="{% static 'img/casaSabia.jpg ' %}"  alt="SABIA"> -->
+            <i class="fas fa-eye " aria-hidden="true" style="font-size: 125px;color: #43914E;"></i>
+            
+            </div>
+            <div class="ps-bot">
+              <p>Presencias un  caso de violencia Animal </p>
+            </div>
+            <span class="ps-sp-top">01</span>
+          </li>
+          <li>
+            <div class="img-handler-bot">
+                <i class="fas fa-hand-holding-heart " aria-hidden="true" style="font-size: 125px;color: #43914E;"></i>
+            </div>
+            <div class="ps-top">
+              <p>Verificas el Estado  del canino </p>
+            </div>
+            <span class="ps-sp-bot">02</span>
+          </li>
+          <li>
+            <div class="img-handler-top">
+                <i class="fas fa-camera  " aria-hidden="true" style="font-size: 125px;color: #43914E;"></i>
+            </div>
+            <div class="ps-bot">
+              <p>Tomas fotografias  o material de video </p>
+            </div>
+            <span class="ps-sp-top">03</span>
+          </li>
+          <li>
+            <div class="img-handler-bot">
+                <i class="fas fa-phone-volume " aria-hidden="true" style="font-size: 125px;color: #43914E;"></i>
+            </div>
+            <div class="ps-top">
+              <p> Acudes al departamento de policia mas sercano </p>
+            </div>
+            <span class="ps-sp-bot">04</span>
+          </li>
+                <li>
+            <div class="img-handler-top">
+                <i class="fas fa-laptop-medical" aria-hidden="true" style="font-size: 125px;color: #43914E;"></i>
+            </div>
+            <div class="ps-bot">
+              <p>Contactas a entes encargados de proteccion </p>
+            </div>
+            <span class="ps-sp-top">05</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+<!-- 
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+            {% for i in denuncias %}
+            <div class="col">
+                <div class="card h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Denuncia Ciudadana</h5>
+                        <p class="card-text">
+                        <ul>
+
+                            <li><strong>codigo : </strong>{{i.id}}</li>
+                            <li><strong>codigo : </strong>{{i.imagen}}</li>
+
+                        </ul>
+                        <strong>Detalle de denuncia</strong>{{i.descripcion}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+
+        </div>
+    </div> -->
+
+  <!-- Titulo de la seccion  -->
+  <div class="row" style="background-color: white;">
+    <div class="col-md-12 heading" style="padding-left: 5%;padding-top: 2%;">
+        <span class="title-icon pull-left"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
+        <h2 class="title">Denuncias Reportadas  <span class="title-desc"> casos de violencia reportadas  </span></h2>
+    </div>
+  </div><!--fin del titulo  -->  
+
+  <div class="container">
+
+    <div id="base" >
+        {% for i in denuncias %}
+        <ul class="denun" style="padding:  5%;">
+          <li class="lis" style="padding: 3%;">
+
+
+            {% if i.imagen %}
+      
+            <img src="/media/{{i.imagen}}" alt="{{i.imagen}}"  style="max-height: 120px;min-height: max-content;" >
+             
+            {% else %}
+            <img src="{% static 'img/casaSabia.jpg ' %}"   alt="SABIA">
+            {% endif %}
+
+
+
+            <div class="crd-details">
+            <h3 class="denun">{{i.nombres }}</h3>
+            <p >{{i.descripcion}}</p>
+            <p >{{i.direccion}}</p>
+              <div class="readmore" >Ver mas<span>→</span></div>
+            </div>
+          </li>
+    
+        </ul>
+        {% endfor %}
+      </div>
+    
+  </div>
+
+
+
+  
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+  
+    </div>
+</div> 
+{% endblock contenido %}
+</body>
+</html>
+
+

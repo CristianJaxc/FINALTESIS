@@ -1,0 +1,19 @@
+{% extends "denuncias/pagina_denuncias.html" %}
+
+
+{% block contenido %}
+
+<body>
+    <h1>Pagina de registro de solicitud para donacion de producto</h1>
+    <br>
+    <hr>
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Eviar solicitud de donacion">
+        </form>
+    </div>
+
+</body>
+{% endblock contenido %}

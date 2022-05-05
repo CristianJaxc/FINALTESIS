@@ -1,0 +1,217 @@
+<!-- carga los archivos estaticos  -->
+{% load static %}
+
+{% if form.errors %}
+<p>Su nombre o Contraseña son Incorrecto , Porfavor Ingrese denuevo </p>
+{% endif %}
+
+{% if next %}
+    {% if user.is_authenticated %}
+    <p>No tiene acceso a la Pagina, Error , Contraseña/Nombre.</p>
+    {% else %}
+    <p>Please login to see this page.</p>
+    {% endif %}
+{% endif %}
+
+<!-- <div class="container"> 
+  <form method="post" action="{% url 'login' %}" >
+    <div class="form-group">
+      {% csrf_token %}
+      <div>
+        <label for="exampleInputEmail1">{{ form.username.label_tag }}</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese Nombre de Usuario">
+        {{ form.username }}
+       
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div>
+        <td>{{ form.password.label_tag }}</td>
+        <td>{{ form.password }}</td>
+      </div>
+      <input type="submit" value="login" />
+    </div>
+  
+  </form>
+  <a href="{% url 'signup' %}"> registro de usuario</a>
+</div>  -->
+
+
+  <!-- <div class="grid">
+    <form method="post" action="{% url 'login' %}"  class="form login">
+      {% csrf_token %}
+   <h2>      Inicio de Sesison      </h2>  
+      <div class="form__field">
+        <label for="login__username"><svg class="icon">
+            <use xlink:href="#icon-user"></use>
+          </svg><span class="hidden">Nombre de Usuario</span></label>
+        {{ form.username }}
+      </div>
+      <div class="form__field">
+        <label for="login__password"><svg class="icon">
+            <use xlink:href="#icon-lock"></use>
+          </svg><span class="hidden">Password</span></label>
+          <td>{{ form.password }}</td>
+      </div>
+      <div class="form__field">
+        <input type="submit" value="login" />
+      </div>
+    </form>
+    <p class="text--center">No a Tiene cuenta <a href="#"> <a href="{% url 'signup' %}"> registro de usuario</a></a> <svg class="icon">
+        <use xlink:href="#icon-arrow-right"></use>
+      </svg></p>
+
+  </div> -->
+ 
+  
+  <!-- <div class="page">
+    <div class="container">
+      <div class="left">
+        <div class="login">Login</div>
+        <div class="eula">By logging in you agree to the ridiculously long terms that you didn't bother to read</div>
+      </div>
+      <div class="right">
+        <svg viewBox="0 0 320 300">
+          <defs>
+            <linearGradient
+                            inkscape:collect="always"
+                            id="linearGradient"
+                            x1="13"
+                            y1="193.49992"
+                            x2="307"
+                            y2="193.49992"
+                            gradientUnits="userSpaceOnUse">
+              <stop
+                    style="stop-color:#284e2e;"
+                    offset="0"
+                    id="stop876" />
+              <stop
+                    style="stop-color:#c6f1cd;"
+                    offset="1"
+                    id="stop878" />
+            </linearGradient>
+          </defs>
+          <path d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
+        </svg>
+        <div class="form">
+          <form method="post" action="{% url 'login' %}"  class="form login">
+            {% csrf_token %}
+          <label for="email">Nombre</label>
+          {{ form.username }}
+          <label for="password">Password</label>
+          {{ form.password }}
+
+
+        <td></td>
+
+        <div class="form__field">
+          <input type="submit" class="btn btn-secundario" value="login" />
+        </div>
+        </form>
+    
+        </div>
+        
+      </div>
+      
+    </div>
+    <p class="text--center">No a Tiene cuenta <a href="#"> <a href="{% url 'signup' %}"> registro de usuario</a></a>
+    </p>
+  </div> -->
+
+
+  <body>
+    
+    <script src="https://kit.fontawesome.com/ab00d86059.js" crossorigin="anonymous"></script>
+        
+    <link rel="stylesheet" href="{% static 'login1.css' %}">
+    <title>Login</title>
+    <!-- <img class="wave" src="" alt=""> -->
+    <div class="nav">
+      <div class="nav-title">
+        <h1>SABIA</h1>
+      </div>
+    
+      <div class="nav-menu">
+        <ul>
+          <li>
+
+            <a href="{% url 'home' %}">
+         
+              <i class="  fas fa-house-user " style="font-size:30px;margin-right: 30%;color: #ffffff"></i>
+          </a>
+       
+        </li>
+        </ul>
+      </div>
+    </div>
+    
+
+
+
+    <div class="container">
+      
+    <div class="img">
+          <img src="{% static 'logosabia.png'  %}" class="img-fluid" style="margin-top: 5%;" width="100%">      
+    </div>
+    <div class="login-container">
+    <form method="post" action="{% url 'login' %}"  class="form login">
+      {% csrf_token %}
+      <img class="avatar"alt="">
+            
+      <i class=" fas fa-user-circle" style="font-size: 90px;margin-right: 30%;color: #43914E"></i>
+      <h2>Login </h2>
+      <div class="input-div one">
+        <div class="i">
+        <i class="fas fa-user"></i>
+        </div>
+       <div>
+        <h5>Username</h5>
+        <div class="input" id="loco">
+                         
+
+        {{ form.username }}
+                        
+        </div>
+                    
+        </div>
+         </div>
+         <div class="input-div two">
+         <div class="i">
+         <i class="fas fa-lock"></i>
+         </div>
+          <div>
+         <h5>Password</h5>
+                      
+          <div class="input" id="loco">
+                         
+          {{ form.password }}
+          </div>
+          </div>
+         </div>
+          <!-- <a  href="{% url 'signup' %}" style="margin-top: 5%;">No tienes Cuenta , Registrate</a> -->
+          <input class="btn" type="submit" value="Continuar">
+          </form>
+          </div>
+      </div>
+      <script type="text/javascript" src="js/main.js"></script>
+  </body>
+<script>
+  
+  const inputs = document.querySelectorAll('.input');
+
+function focusFunc(){
+    let parent = this.parentNode.parentNode;
+    parent.classList.add('focus');
+}
+
+function blurFunc(){
+    let parent = this.parentNode.parentNode;
+    if(this.value == ""){
+        parent.classList.remove('focus');
+    }
+}
+
+inputs.forEach(input => {
+    input.addEventListener('focus', focusFunc);
+    input.addEventListener('blur', blurFunc);
+});
+</script>

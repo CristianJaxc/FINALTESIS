@@ -1,0 +1,90 @@
+.denun li, ul, p, h3 {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+  }
+  
+  .denun h3 {
+	position: relative;
+	font-family: 'Song Myung', serif;
+	font-size: 25px;
+	font-weight: 500;
+  }
+  
+  .denun h3:after {
+	  content: '';
+	  width: 100px;
+	background-color: #bada55;
+	width: 100px;
+	height: 3px;
+	display: block;
+	margin-top: 5px;
+  /*     position: absolute; */
+  /*     bottom: 5px; */
+  /*     z-index: 1; */
+  }
+  
+  .lis {
+	background-color: #fefefe;
+	border: #e5e5e5 1px solid;
+	border-radius: 5px;
+	max-width: 700px;
+	margin: 50px auto;
+	display: grid;
+	grid-template-columns: 1fr 400px;
+	grid-gap: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .crd-details {
+	width: 90%;
+	display: grid;
+	grid-template-column: 100px 300px 1fr;
+	align-items: center;
+  }
+  
+  .readmore {
+	background-color: red;
+	width: 70%;
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 5px;
+	color: #fefefe;
+	 background: linear-gradient(to right, #bada55 50%, #fff 50%);
+	background-size: 200% 100%;
+	background-position: right bottom;
+	color: #bada55;
+	transition: .5s ease-in;
+	border: #bada55 solid 1px;
+	cursor: pointer;
+  }
+  
+  .readmore:hover {
+	background-position: left bottom;
+	color: #fff;
+  }
+  
+  .readmore span {
+	font-size: 18px;
+	font-weight: 600;
+	
+  
+  }
+  @media only screen and (max-width: 991px) {
+  
+  .lis img {
+  display: none;
+  }
+  .lis   {
+	  width: 400px;
+  }
+  .readmore{
+	  width: 300px;
+	  
+  }
+  .denun{
+	  width: 100%;
+  }
+  }
+  
