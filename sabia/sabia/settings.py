@@ -26,7 +26,7 @@ SECRET_KEY = 'j@i7ac0khclyp(n)^um)d(jr^5jxj(l0=5^+4i(t6o@f)u)_pq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cristiansabia.pythonanywhere.com']
 
 
 # Application definition
@@ -83,12 +83,19 @@ WSGI_APPLICATION = 'sabia.wsgi.application'
 
 DATABASES = {
     'default': {
+
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'SabiaFinalDB',
-            'USER': 'postgres',
-            'PASSWORD': 'cristian',
-            'HOST': 'localhost',
-            'PORT': 5432,
+            'USER': 'super',
+            'PASSWORD': 'Tesis66Universidad',
+            'HOST': 'cristianSabia-2655.postgres.pythonanywhere-services.com',
+            'PORT': 12655,
+            #'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            # 'NAME': 'SabiaFinalDB',
+            # 'USER': 'postgres',
+            #'PASSWORD': 'cristian',
+            #'HOST': 'localhost',
+            # 'PORT': 5432,
 
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
@@ -128,7 +135,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+#USE_TZ = True
 
 LANGUAGES=[
     ('en' ,'Ingles'),

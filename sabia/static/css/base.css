@@ -718,7 +718,7 @@ width: 100vh;
 /* DENUNCIAS */
 
 #denu{
-	background-image: url(/static/denun.png);
+	background-image: url(/static/img/denun.png);
 
   background-position: center;
   background-size:contain;

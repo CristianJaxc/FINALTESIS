@@ -2,7 +2,33 @@
 .color{
     background-color:#43914E;
 }
+.colorFondo{
+
+background-image: url('/static/img/Fondo_Perro.webp');
+background-position: center; /* Center the image */
+ background-repeat: no-repeat; /* Do not repeat the image */
+background-size: cover;
+   opacity: 0.6;
+}
+.colorFondo1{
+
+background-image: url('/static/img/Fondo_casaSabia.webp');
+background-position: center; /* Center the image */
+ background-repeat: no-repeat; /* Do not repeat the image */
+background-siz
+e: cover;
+   opacity: 0.6;
+}
+.colorFondo2{
+
+background-image: url('/static/img/Fondo_voluntariado.webp');
+background-position: center; /* Center the image */
+ background-repeat: no-repeat; /* Do not repeat the image */
+background-size: cover;
+   opacity: 0.6;
+}
 .color1{
-    background-color: rgb(255, 255, 255);
+ background-color:#43914E;
+
 }
 
