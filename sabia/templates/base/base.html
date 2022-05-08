@@ -159,10 +159,6 @@
 <nav class=" navbar-expand-lg bg-white  navbar-light shadow-sm px-5 py-3 py-lg-0">
  <div>
 
-      <img src="{% static 'img/logosabia.webp' %}" style="width: 30%;" alt="logo">
-     <hr>
-       <small class="py-2"><i class="far fa-clock text-primary me-2"></i>Abierto : Lunes - Domingo  : 8.00 am - 8.00 pm </small>
-
  </div>
     <!-- <button class="navbar-toggler" aria-label="Center Align type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon">
@@ -171,10 +167,27 @@
         </span>
         <span class="visually-hidden">Opciones</span>
     </button> -->
-    <div class="collapse navbar-collapse" id="navbarCollapse">
+
+    <H2 class="navbar-toggler" >
+<div class="row">
+    <div class="col-md-8" >
+            <img src="{% static 'img/logosabia.webp' %}" style="width: 35%; margin-left: -20px;" alt="logo">
+
+    </div>
+    <hr>
+    <div class="col-xs-12 col-md-8">
+                   <small class="py-2"><i class="far fa-clock text-primary me-2"></i>Abierto: 8.00 am - 8.00 pm </small>
+
+    </div>
+
+
+</div>
+
+
+    </H2>
+    <div class="collapse navbar-collapse" id="navbarCollapse" >
       <a href="{% url 'home' %}" class="navbar-brand p-0">
         <img src="{% static 'img/logosabia.webp' %}" style="width: 40%; margin-left: -20px;" alt="logo">
-   
       </a>
         <div class="navbar-nav ms-auto py-0">
             <a href="{% url 'home' %}" class="nav-item nav-link active">Inicio</a>
@@ -198,14 +211,12 @@
 
 
 
-  <div class="offcanvas-menu-overlay" >
+  <div class="offcanvas-menu-overlay">
 
 
   </div>
 
-  <div class="canvas-open" >
-
-
+  <div class="canvas-open"   >
     <i class="fa fa-bars">
 
     </i>
