@@ -724,4 +724,6 @@ width: 100vh;
   background-size:contain;
   background-repeat: no-repeat;
 }
-
+#celular{
+background-color:green;
+}

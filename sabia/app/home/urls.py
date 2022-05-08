@@ -7,7 +7,7 @@ from app.home.views import signup_view, ContactoCreate,Eliminar_Contacto, Contac
 
 urlpatterns = [
     path('',views.index,name='home' ),
-    path('pagina',views.prueba,name='pagina' ),
+    path('pagina',views.prueba,name='pagina'),
     path('signup/', signup_view, name="signup"),
     path('contacto_registrar',ContactoCreate.as_view(),name='contacto_registrar'),
     path('contacto_listado',Contactos_Listado.as_view(),name='contacto_listado'),
@@ -15,9 +15,4 @@ urlpatterns = [
     path('contactos_detalle/<int:pk>', ContactoDetail.as_view(), name='contactos_detalle'),
     path('',include('pwa.urls')),
 ]
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-
-
-
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

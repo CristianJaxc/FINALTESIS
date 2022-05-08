@@ -22,7 +22,7 @@
 
 
 
-    <section class="voluntariado"  >
+    <section class="voluntariado">
          <!-- Hero Start -->
  <div class="container-fluid colorFondo2 py-5  mb-5">
     <div class="row py-3" >
@@ -252,10 +252,8 @@
           <div  class="actions">
             {% if user.is_superuser %}
           
-
             <a class=" title" href="{% url 'detalle_blogs' i.id %}">
                 
-        
                 <button type="button" class="btn btn-sm " style="margin-left: 15%;">Revisar </button>
            
             </a>
@@ -292,7 +290,9 @@
               <button   type="button"  class="btn btn-danger " style="background-color: rgb(237, 109, 109);font-size: 12px;margin-left: 35%;" data-bs-dismiss="modal" >X</button>
      
            <form method="post" class="form1" enctype="multipart/form-data" > 
-            </div>
+
+
+
             <div class="modal-body" >
                 <h2 style="padding:5%;background-color: rgb(255, 255, 255);text-align: center;">
                 
@@ -315,9 +315,9 @@
             </div>
           </div>
         </div>
-       </section>
+       </div>
    
-
+     </section>
 
 
 
