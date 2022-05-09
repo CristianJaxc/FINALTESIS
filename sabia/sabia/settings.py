@@ -86,6 +86,7 @@ DATABASES = {
 
 
 
+
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'SabiaFinalDB',
             'USER': 'super',
@@ -240,5 +241,6 @@ PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'en-US'
 
 PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, "serviceworker.js")
-
+PWA_APP_SHORTCUTS=[{ "name": "Adopciones", "short_name": "Adopta", "descripción": "Tenemos mas de 120 perros para adoptar ",
+                  "url": "/pagina", "icons": [{'src': '/static/pwa3.png', "tamaño s": "1602x160" }] }]
 #PWA_APP_DEBUG_MODE = False

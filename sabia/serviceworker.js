@@ -42,8 +42,7 @@ self.addEventListener('activate', event => {
             return Promise.all(
                 cacheNames
                     .filter(cacheName => (cacheName.startsWith("django-pwa-")))
-                    .filter(cacheName => (cacheName !== staticCacheName))
-                    .map(cacheName => caches.delete(cacheName))
+                    .filter(cacheName => (cacheName !== staticCacheName))                    .map(cacheName => caches.delete(cacheName))
             );
         })
     );
@@ -61,3 +60,6 @@ self.addEventListener("fetch", event => {
             })
     )
 });
+
+
+
