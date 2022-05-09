@@ -224,7 +224,7 @@
 
   </div>
   <!-- inicio de la navegacion modo celular  -->
-  <div class="offcanvas-menu-wrapper" id="celular"  style="background-color:green">
+  <div class="offcanvas-menu-wrapper"   style="  background: #43914E" >
 
     <div class="canvas-close">
       <i class="fas fa-times-circle" style="color: white;">
@@ -236,27 +236,29 @@
     <div class="row" >
       <!-- inicio para perfil registrado -->
       <div class="col-md-12 heading">
+
         <!-- verificamos que exista un usuario  -->
         {% if user.is_authenticated %}
 
         <span class=" pull-left">
 
           <!-- <img src="https://i.imgur.com/CeVfZyY.jpg" width="50" class="rounded-circle"> -->
-<ul>
+              <ul style="list-style:none">
 
 
           <li class="nav-item dropdown">
 
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
-              <h2 class="title" style="font-size:15px;color: white;">{{user.username}} <span class="title-desc"
+              <h2 class="title" style="font-size:15px;color: white;">{{user.username}}
+                  <span class="title-desc"
                   style="font-size:15px;color: rgb(226, 223, 223);">Voluntario </span></h2>
 
             </a>
 
-            <ul class="dropdown-menu" id="drop" style="background-color: #ccdfd1;">
+            <ul class="dropdown-menu"  style="">
               <!-- redireccion al perfil  -->
-              <li><a href="">Perfil</a></li>
+              <li><a class="dropdown-item" href="">Perfil</a></li>
               <li>
                 <!-- cerrar la sesion  -->
                 <a class="dropdown-item" href="{% url 'logout' %}">Cerrar Sesion</a>
