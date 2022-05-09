@@ -88,6 +88,7 @@ DATABASES = {
 
 
 
+
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'SabiaFinalDB',
             'USER': 'super',
@@ -169,16 +170,17 @@ LOGIN_REDIRECT_URL = 'pagina'
 LOGOUT_REDIRECT_URL = '/'
 
 # <----------- PWA - CONFIGURACION ------------->
-PWA_APP_NAME = 'SABIA' 
-PWA_APP_DESCRIPTION = "sbaia_portal" 
+PWA_APP_NAME = 'Santuario Bienestar Animal'
+PWA_APP_SHORT_NAME = 'SABIA'
+PWA_APP_DESCRIPTION = "Sabia_Mobil"
 PWA_APP_THEME_COLOR = '#0A0302'
 PWA_APP_BACKGROUND_COLOR = '#43914E'
 PWA_APP_DISPLAY = 'standalone'
 PWA_APP_SCOPE = '.' 
 PWA_APP_ORIENTATION = 'any' 
 PWA_APP_START_URL = './'
+PWA_APP_STATUS_BAR_COLOR = 'default'
 
-PWA_APP_STATUS_BAR_COLOR = 'default' 
 PWA_APP_ICONS = [ 
  {
     'src': '/static/img/icons/icon-48x48.png',
@@ -278,12 +280,26 @@ PWA_APP_ICONS_APPLE = [
 
 ]
 
-
 PWA_APP_SPLASH_SCREEN = [{'src': '/static/img/icons/icon-512x512.png', 'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)' } ]
 PWA_APP_DIR = 'ltr' 
 PWA_APP_LANG = 'en-US'
-
+PWA_APP_PERMISSIONS = [
+    "notifications",
+    "webRequest"
+]
 PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, "serviceworker.js")
-PWA_APP_SHORTCUTS = [{"name": "Adopciones", "short_name": "Adopta", "descripción": "Tenemos mas de 120 perros para adoptar ",
-                      "url": "/pagina", "icons": [{'src': '/static/img/icons/icon-152x152.png', "tamaño s": "152x152"}]}]
+PWA_APP_SHORTCUTS = [{
+    "name": "Adopciones",
+    "description": "Adopta un perro",
+    "url": "./",
+    "icons": [
+        {
+            'src': '/static/images/icons/icon-192x192.png',
+            'size': '192x192',
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ]
+
+}]
 #PWA_APP_DEBUG_MODE = False
