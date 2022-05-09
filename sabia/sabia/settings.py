@@ -87,6 +87,7 @@ DATABASES = {
 
 
 
+
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'SabiaFinalDB',
             'USER': 'super',
@@ -175,72 +176,114 @@ PWA_APP_BACKGROUND_COLOR = '#43914E'
 PWA_APP_DISPLAY = 'standalone'
 PWA_APP_SCOPE = '.' 
 PWA_APP_ORIENTATION = 'any' 
-PWA_APP_START_URL = '/' 
+PWA_APP_START_URL = './'
 
 PWA_APP_STATUS_BAR_COLOR = 'default' 
 PWA_APP_ICONS = [ 
  {
-    'src': '/static/pwa72_72.png', 
-    "sizes": "72x72",
-    "type": "image/png"
+    'src': '/static/img/icons/icon-48x48.png',
+    'sizes': "48x48",
+    'type': "image/png"
   }, 
   {
-   'src': '/static/pwa96_96.png', 
-    "sizes": "96x96",
-    "type": "image/png"
+   'src': '/static/img/icons/icon-72x72.png',
+   'sizes': "72x72",
+   'type': "image/png"
   }, 
   {
-   'src': '/static/pwa144_144.png', 
-    "sizes": "144x144",
-    "type": "image/png"
+   'src': '/static/img/icons/icon-96x96.png',
+   'sizes': "96x96",
+   'type': "image/png"
   }, 
-    { 
-        'src': '/static/pwa3.png', 
-        'sizes': '160x160',
-        'type': "image/png",
+    {
+    'src': '/static/img/icons/icon-128x128.png',
+    'sizes': '128x128',
+    'type': "image/png",
         
         }, 
   {
-      'src': '/static/pwa192_192.png', 
-    "sizes": "192x192",
-    "type": "image/png"
-  }]
-PWA_APP_ICONS_APPLE =  [ 
-
-
- {
-     'src': '/static/pwa72_72.png', 
-    "sizes": "72x72",
-    "type": "image/png"
-  }, 
+    'src': '/static/img/icons/icon-144x144.png',
+    'sizes': "144x144",
+    'type': "image/png"
+  },
   {
-   'src': '/static/pwa96_96.png', 
-    "sizes": "96x96",
-    "type": "image/png"
-  }, 
-  {
-   'src': '/static/pwa144_144.png', 
-    "sizes": "144x144",
-    "type": "image/png"
-  }, 
-    { 
-        'src': '/static/pwa3.png', 
-        'sizes': '160x160',
+    'src': '/static/img/icons/icon-152x152.png',
+    'sizes': "152x152",
+    'type': "image/png"
+  },
+    {
+    'src': '/static/img/icons/icon-192x192.png',
+    'sizes': "192x192",
+    'type': "image/png"
+    },
+
+    {
+    'src': '/static/img/icons/icon-384x384.png',
+    'sizes': "284x284",
+    'type': "image/png"
+    },
+    {
+    'src': '/static/img/icons/icon-512x512.png',
+    'sizes': "512x512",
+    'type': "image/png"
+    },
+]
+PWA_APP_ICONS_APPLE = [
+    {
+        'src': '/static/img/icons/icon-48x48.png',
+        'sizes': "48x48",
+        'type': "image/png"
+    },
+    {
+        'src': '/static/img/icons/icon-72x72.png',
+        'sizes': "72x72",
+        'type': "image/png"
+    },
+    {
+        'src': '/static/img/icons/icon-96x96.png',
+        'sizes': "96x96",
+        'type': "image/png"
+    },
+    {
+        'src': '/static/img/icons/icon-128x128.png',
+        'sizes': '128x128',
         'type': "image/png",
-        
-        }, 
-  {
-      'src': '/static/pwa192_192.png', 
-    "sizes": "192x192",
-    "type": "image/png"
-  }]
+
+    },
+    {
+        'src': '/static/img/icons/icon-144x144.png',
+        'sizes': "144x144",
+        'type': "image/png"
+    },
+    {
+        'src': '/static/img/icons/icon-152x152.png',
+        'sizes': "152x152",
+        'type': "image/png"
+    },
+    {
+        'src': '/static/img/icons/icon-192x192.png',
+        'sizes': "192x192",
+        'type': "image/png"
+    },
+    {
+        'src': '/static/img/icons/icon-384x384.png',
+        'sizes': "384x384",
+        'type': "image/png"
+    },
+    {
+        'src': '/static/img/icons/icon-512x512.png',
+        'sizes': "512x512",
+        'type': "image/png"
+    },
+
+]
 
 
-PWA_APP_SPLASH_SCREEN = [ { 'src': '/static/img/huella.png', 'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)' } ]
+PWA_APP_SPLASH_SCREEN = [{'src': '/static/img/icons/icon-512x512.png', 'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)' } ]
 PWA_APP_DIR = 'ltr' 
 PWA_APP_LANG = 'en-US'
 
 PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, "serviceworker.js")
-PWA_APP_SHORTCUTS=[{ "name": "Adopciones", "short_name": "Adopta", "descripción": "Tenemos mas de 120 perros para adoptar ",
-                  "url": "/pagina", "icons": [{'src': '/static/pwa3.png', "tamaño s": "1602x160" }] }]
+PWA_APP_SHORTCUTS = [{"name": "Adopciones", "short_name": "Adopta", "descripción": "Tenemos mas de 120 perros para adoptar ",
+                      "url": "/pagina", "icons": [{'src': '/static/img/icons/icon-152x152.png', "tamaño s": "152x152"}]}]
 #PWA_APP_DEBUG_MODE = False
