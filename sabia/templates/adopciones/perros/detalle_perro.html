@@ -1,161 +1,152 @@
 {% extends "denuncias/pagina_denuncias.html" %}
-
+{% block titulo %}Detalle Adopcion {% endblock %}
 {% load static %}
 {% block contenido %}
 <head>
-     <link href="{% static 'css/perro.css' %}" rel="stylesheet">
+
 </head>
 
 <body>
-    
-      
- 
-    <!-- <div class="container">
-        <ul>
-            <li><strong>codigo de perro:</strong> {{perro.id}}</li>
-            <li><strong>Imagen</strong> {{perro.imagen_mascota}}</li>
-            <li><strong>Nombre:</strong> {{perro.nombre}}</li>
-            <li><strong>Raza:</strong> {{perro.raza}}</li>
-            <li><strong>edad</strong> {{perro.edad}}</li>
-            <li><strong>vacunas:</strong> {{perro.vacunas}}</li>
-            <li><strong>disponible para adopcion:</strong> {{perro.estado}}</li>
-            <li><strong>descripccion</strong> {{perro.descripcion}}</li>
-        </ul>
-        <hr><br>
-        <ul>
-            <li><a href="{% url 'registrar_solicitud' perro.id %}">Solicitar para adopcion</a></li>
-        </ul>
-    </div> -->
-<div class="container">
-    <div class='container2'>
-        <div class='background-element' id='background-element'>
-        </div>
-        <div class='highlight-window' id='product-img'>
-            {% if perro.imagen_mascota %}
-          
-            <img src="/media/{{perro.imagen_mascota}}" alt="{{perro.imagen_mascota}}" class="img-fluid"  style="width: 100%;" >
-             
+<div class="container"  style="margin-bottom:10%;">
+	 <div class="row" style="margin-top:5%;">
+		      <div class="col-md-6" style="padding-top: 5%;">
+               <div class="widget widget-tab">
+
+				   <div class="tab-content" style="margin-left: 0%;">
+
+
+                   {% if perro.imagen_mascota %}
+
+            <img src="/media/{{perro.imagen_mascota}}" alt="{{perro.imagen_mascota}}" class="img-fluid" width="50%">
+
             {% else %}
-            <img class="img-fluid rounded-top" src="{% static 'img/albergue1.png ' %}"   alt="">
+            <img  class="article-banner" src="{% static 'img/albergue1.png ' %}"   alt="">
             {% endif %}
 
 
-        
-            
-            <div class='highlight-overlay' id='highlight-overlay'></div></div>
-        <div class='window'>
-          <div class='main-content'>
-            <h2 style="text-align: center;">  {{perro.nombre}}</h2>
-            <hr>
-            <h3>Raza </h3>{{perro.raza}}
-            <h3>Edad </h3>{{perro.edad}}
-        <div class='description' id='description'>
-<h3>
-    Descripcion  
-</h3> {{perro.descripcion}}
-      
-        
-        </div>
-            <div class='highlight-window  mobile' id='productimg'>
-                
-                {% if perro.imagen_mascota %}
-          
-                <img src="/media/{{perro.imagen_mascota}}" alt="{{perro.imagen_mascota}}" class="img-fluid"  style="width: 100%;" >
-                 
-                {% else %}
-                <img class="img-fluid rounded-top" src="{% static 'img/albergue1.png ' %}"   alt="">
-                {% endif %}
-    
-    
-                
-                <div class='highlight-overlay' id='highlight-overlay-mobile'></div></div>
-            <div class='options'>
-              <div class='color-options'>
-            <h3>
-                vacunas   </h3>             {{perro.vacunas}}
-            <div class='color-picker'>
-          
-       
+
+                      </div>
+                </div><!-- End default tabs -->
+            </div><!--/ fin de la columna de reportes -->
+            <div class="col-md-6">
+                <h3 class="title-border" style="text-align: center;" >Datos de :{{perro.nombre}} </h3>
+                <p>un poco de la Historia del canino :  </p>
+                <div class="accordion" id="accordionExample">
+                    <div >
+                        <div  class="click">
+                            <h2 class="mb-0" > <button class="btn btn-block btn-secundario  active1"   type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> 	<i class="fa fa-paw" aria-hidden="true" ></i>  Datos  </button> </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                		<p>
+												Raza: {{perro.raza}}
+											<hr>
+												Edad : {{perro.edad}}
+								<hr>
+												Sexo :
 
 
-            </div>
-              
-              </div>
-              <div class='size-picker' style="text-align: center;">
-            <h3>
-                Disponibilidad
-            </h3>  
-        <div class='range-picker' id='range-picker'>
-            {% if perro.estado is True %}
-                  Quiere ser Adoptado 
-            
-           
-            {% endif %}
+
+                                        </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div >
+                        <div  class="click"  id="headingTwo">
+                            <h2 class="mb-0"> <button class="btn btn-block text-left btn-secundario   collapsed active1" type="button"  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> 	<i class="fa fa-paw" aria-hidden="true"  ></i> Vacunas  </button> </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>
+									Tiene vacunas : {{perro.vacunas}}
+
+
+								</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div >
+                        <div  class="click" id="headingOne">
+                            <h2 class="mb-0"> <button class="btn btn-block text-left btn-secundario   collapsed active1"  type="button"   data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> 	<i class="fa fa-paw" aria-hidden="true" ></i> Descripcion  </button> </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+
+                                <p>
+     				{{perro.descripcion}}
+								</p>
+                            </div>
+                        </div>
+
+<!-- IMAGEN DE REFFERENCIA  -->
+
+<!-- <img src="{% static 'img/banner2.png'  %}"  alt="banner" class="img-fluid" style="margin-top: 5%;" width="100%">                               -->
+<!-- <div id="rep" style="margin-top: 5%;padding-bottom: 0%;background-color: #dfefe3;color: white;">
+
+        <h2 ><i class="fas fa-caret-right" style="color: yellow;"></i> Recepcion via Telefonica <br>
+        <br>
+
+        <nav style="font-size: 20px;margin-top: -3%;padding-left: 5%;">Todos los dias de 8:30 a 16:30 </nav>
+        <br>
+        <nav style="color: yellow;margin-top:-3%;padding-left: 5%;">0998530277</nav>
+        </h2>
+        <h2><i class="fas fa-caret-right" style="color: yellow;"></i> Recepcion Secretaria de Ambiente <br>
+            <br>
+            <nav style="font-size: 20px;margin-top: -3%;padding-left: 5%;">ECU 911. </nav>
+            <br>
+            <nav style="color: yellow;margin-top:-3%;padding-left: 5%;">3952-300 ext. 24131.</nav>
+        </h2>
+
+         <h2 style="background-color: rgb(86, 122, 91);position: relative;padding-top: 2%;padding-left: 5%;padding-bottom: 2%;">
+        Santuario Bienestar Sabia
+       </h2>
+
+</div>   -->
+<!-- fin de referencia -->
+
+
+                    </div>
+
+
+                </div><!--/ Accordion end -->
+
+                <!-- Counter Strat -->
+
+
+
+            </div><!--/ fin de la columna de ayudas -->
+
+
+
+
         </div>
-               
-              </div>  
-          </div>
-                  <div class='divider'></div>
-      
-                <div class='purchase-info'>
-            <div class='price'>
-                
-                {% if user.is_authenticated %}
-   
-          
+	<div class="" style="margin-top:5%;">
+		<a href="{% url 'registrar_solicitud' perro.id %}">
+
+            <button class="btn btn-principal" >Adoptar</button>
+
+        </a>
+    {% if user.is_authenticated %}
+
+
               <a href="{% url 'editar_perro' perro.id %}">
                 <div class="btn btn-secundario">
 
                     Editar perro
-                </div>  
-           
-            
+                </div>
+
+
             </a>
                 {% endif %}
-          
-            
-            </div>
-           <a href="{% url 'registrar_solicitud' perro.id %}">
-               
-            <button>Adoptar</button>
-        
-        </a>
-                
-          </div>
-          </div>
-        </div>
-      </div>
+	</div>
+
+
 </div>
 
-<script>
-    document.getElementById('range-picker').addEventListener('click', function(e) {
-  var sizeList = document.getElementById('range-picker').children;
-  for (var i = 0; i <= sizeList.length - 1; i++) {
-    console.log(sizeList[i].classList);
-    if (sizeList[i].classList.contains('active')) {
-      sizeList[i].classList.remove('active');
-    }
-  }
-  e.target.classList.add('active');
-})
-
-document.getElementById('color-a').addEventListener('click', function() {
-  document.getElementById('color-overlay').style.transform = 'translateX(-0.5px)';
-  document.getElementById('background-element').style.backgroundColor = '#333';
-  document.getElementById('highlight-overlay').style.opacity = '1';
-  document.getElementById('highlight-overlay-mobile').style.opacity = '1';
-  document.getElementById('color-name').innerHTML = "BLACK / 050";
-  document.getElementById('color-name').style.color = '#333'
-
-})
-document.getElementById('color-b').addEventListener('click', function() {
-  document.getElementById('color-overlay').style.transform = 'translateX(45px)';
-  document.getElementById('background-element').style.backgroundColor = '#457';
-  document.getElementById('highlight-overlay').style.opacity = '0';
-  document.getElementById('highlight-overlay-mobile').style.opacity = '0';
-  document.getElementById('color-name').innerHTML = "BLUES / 2V5";
-  document.getElementById('color-name').style.color = '#457'
-})
-</script>
 </body>
+
 {% endblock contenido %}

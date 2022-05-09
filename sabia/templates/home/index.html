@@ -1,6 +1,6 @@
 {% extends "base/base.html" %}
 
-{% block titulo %} Inicio {% endblock %}
+{% block titulo %} SABIA {% endblock %}
 {% block contenido %} 
 {% load static %}
 {% load pwa %}
@@ -78,6 +78,36 @@
     {% progressive_web_app_meta %}
 
 </head>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"  style="background-color:#43914E;">
+        <h5 class="modal-title" id="exampleModalLabel"  style="color:white">Comunicado   </h5>
+        <button type="button" class="btn-close" style="background-color:white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"  style="background-color:#71AF22">
+                    {% for m in mascotas %}
+   {% if forloop.first %}
+                                        {% if m.imagen_mascota %}
+                                        <img src="media/{{ m.imagen_mascota }}" alt="{{m.imagen_mascota }}" class="img-fluid"  style="max-height: 300px;min-height: max-content;" >
+                                        {% else %}
+                                        <img src="{% static 'adoptame1.png'  %}" class="img-fluid" >
+                                        {% endif %}
+                                            <h2>{{m.nombre}}</h2>
+                                            <a href="{% url 'pagina_adopciones' %}" style="color: #ffffff;">Leer Mas</a>
+                                      {% endif %}
+                                    {% endfor %}
+      </div>
+      <div class="modal-footer">
+     <p>Gracias Por visitarnos , Santuario Bienestar Animal </p>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- Carousel Start -->
     <div class="container-fluid p-0">
       <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -120,7 +150,7 @@
   <!-- Carousel End -->
 
     <!-- Banner Start -->
-    <div class="container-fluid banner mb-5 ">
+    <div class="container-fluid banner mb-5  responsive " >
       <div class="container">
           <div class="row gx-0">
               <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
@@ -167,7 +197,7 @@
   <!-- Titulo de la seccion  -->
   <div class="row" style="background-color: white;">
     <div class="col-md-12 heading" style="padding-left: 5%;padding-top: 2%;">
-        <span class="title-icon pull-left"><i class="fas fa-hands-helping" aria-hidden="true"></i></span>
+        <span class="title-icon pull-left responsive"><i class="fas fa-hands-helping" aria-hidden="true"></i></span>
         <h2 class="title">Actuar Ciudadano <span class="title-desc"> Perdidas y Denunicas de Mascotas  </span></h2>
     </div>
 </div><!--fin del titulo  -->  
@@ -393,7 +423,7 @@
 <!-- Titulo de la seccion  -->
 <div class="row" style="background-color: white;">
   <div class="col-md-12 heading" style="padding-left: 5%;padding-top: 2%;">
-      <span class="title-icon pull-left"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
+      <span class="title-icon pull-left responsive"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
       <h2 class="title">Servicios   <span class="title-desc"> Princiapales acciones del albergue   </span></h2>
   </div>
 </div><!--fin del titulo  -->  
@@ -435,7 +465,7 @@
 <!-- Titulo de la seccion  -->
 <div class="row" style="background-color: white;">
   <div class="col-md-12 heading" style="padding-left: 5%;padding-top: 2%;">
-      <span class="title-icon pull-left"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
+      <span class="title-icon pull-left responsive"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
       <h2 class="title">Voluntariado <span class="title-desc"> Equipo de Voluntarios     </span></h2>
   </div>
 </div><!--fin del titulo  -->  
@@ -515,7 +545,7 @@
 <!-- Titulo de la seccion  -->
 <div class="row" style="margin-top: 5%;" >
   <div class="col-md-12 heading" style="padding-left: 5%;padding-top: 2%;padding-bottom: 5%;background-color: white;">
-      <span class="title-icon pull-left"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
+      <span class="title-icon pull-left responsive"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
       <h2 class="title">Sobre Nosotros  <span class="title-desc"> Misions y Vision  </span></h2>
   </div>
 </div><!--fin del titulo  -->  
@@ -599,7 +629,7 @@
 
 <div class="row" style="background-color: white;" >
   <div class="col-md-12 heading" style="padding-left: 5%;padding-top: 2%;">
-      <span class="title-icon pull-left"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
+      <span class="title-icon pull-left responsive"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
       <h2 class="title">Donaciones  <span class="title-desc"> Ayudando a los mas Pequeños </span></h2>
   </div>
   
@@ -738,7 +768,7 @@
 <!-- Titulo de la seccion  -->
 <div class="row" style="background-color: white;">
   <div class="col-md-12 heading" style="padding-left: 5%;padding-top: 2%;">
-      <span class="title-icon pull-left"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
+      <span class="title-icon pull-left responsive"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
       <h2 class="title">Organizaciones   <span class="title-desc">Conexion Internacional :    </span></h2>
   </div>
   
@@ -763,6 +793,11 @@
 
   </html>
 
+<script>
+    $( document ).ready(function() {
+    $('#myModal').modal('toggle')
+});
 
+</script>
 {% endblock %}
 

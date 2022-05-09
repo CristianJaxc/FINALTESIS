@@ -42,7 +42,7 @@ def Pagina_adopciones(request):
 
      try :
 
-        paginator = Paginator(perros,1)
+        paginator = Paginator(perros,6)
         perros = paginator.page(page)
      except:
             raise Http404

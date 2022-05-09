@@ -71,20 +71,5 @@
 	
   
   }
-  @media only screen and (max-width: 991px) {
-  
-  .lis img {
-  display: none;
-  }
-  .lis   {
-	  width: 400px;
-  }
-  .readmore{
-	  width: 300px;
-	  
-  }
-  .denun{
-	  width: 100%;
-  }
-  }
+
   

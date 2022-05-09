@@ -3,6 +3,13 @@
 {% block titulo %} Adopciones {% endblock %}
 
 {% block contenido %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/perro1.css' %}">
+</head>
+
+
+
 <!-- <body>
     
     <center>
@@ -64,7 +71,7 @@
 
 <div class="container">
     <div class="row">
-        <div  class="col-md-6 Search" style="margin-left: 25%;">
+        <div  class="col-md-6 Search" style="margin-left: 5%;">
             <form method="get">
                 <div id="custom-search-input">
                     <div class="input-group.col-md-12">
@@ -98,56 +105,33 @@
 
 <div class="album py-5 " >
     <div class="container" style="padding-bottom:5%;" >
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 container-fluid"  >
 
+     <div class="content-wrapper">
+       {% for m in perros %}
+  <div class="news-card">
 
-        {% for m in perros %}
-
-
-        <!--FILA 1 -->
-        <div class="col" >
-          <div class="card shadow-sm" style="background-color: rgb(252, 218, 167);" >
-            <a style="text-align: center;padding-top:2%;background-color: rgb(110, 87, 53);color: white;">
-              <td>{{m.nombre}}</td>
-            </a>
-            {% if m.imagen_mascota %}
+    <a href="#" class="news-card__card-link"></a>
+          {% if m.imagen_mascota %}
                 <br/>
-                <img src="/media/{{m.imagen_mascota}}" alt="{{m.imagen_mascota}}" class="img-fluid"  style="max-height: 300px;min-height: max-content;" >
-                 
+                <img src="/media/{{m.imagen_mascota}}" alt="{{m.imagen_mascota}}" class="news-card__image">
                 {% else %}
-                <img src="{% static 'imagenes/adopciones/adop1.jpg'  %}" class="img-fluid">
+                <img src="{% static 'imagenes/adopciones/adop1.jpg'  %}" class="news-card__image">
                 {% endif %}
-            <div class="card-body" style="background-color: rgb(110, 87, 53);color: white;">
-              <p class="card-text">
-                <td>{{m.descripcion}}</td>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-              
-                <div class="btn-group" style="margin-left: 25%;">
-                    <a href="{% url 'detalle_perro' m.id %}" class="card-link">
-                        
-                        <button type="button" class="btn btn-sm btn-outline-secondary" style="color: white;">Conoce mas</button>
-                    </a>
-                </div>
-                <small class="" >{{ m.fecha_creacion }}</small>
-<div class="modal fade" id="edicion" role="dialog">
+
+      <div class="news-card__text-wrapper">
+      <h2 class="news-card__title">{{m.nombre}}</h2>
+      <div class="news-card__post-name">{{m.raza}}</div>
+      <div class="news-card__details-wrapper">
+
+        <a href="{% url 'detalle_perro' m.id %}" class="news-card__read-more">Ver mas  <i class="fas fa-long-arrow-alt-right"></i></a>
+      </div>
+    </div>
+
+  </div>
+    {% endfor %}
 
 </div>
 
-              </div>
-            </div>
-          </div>
-          <br>
-  
-        </div>
-
-    {% endfor %}
-
-        </div>
-
-
-
-     
 
 
 
@@ -214,4 +198,8 @@
     </div>
   </div>
 
+
+
 {% endblock contenido %}
+
+

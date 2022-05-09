@@ -106,7 +106,6 @@ margin-left: -48px;
 	}
 
 
-
 	.nav-logo .nav-logo-right {
 		display: none;
 	}
@@ -295,8 +294,45 @@ margin-left: -48px;
 		margin-right: 6px;
 	}
 	.map .icon-list {
-		display: none;
+
 	}
+ .responsive{
+	display: none;
+    }
+
+  .responsiveDenuncia{
+
+position:absolute;
+right:100px;
+   }
+
+.lis img {
+    display:none;
+  }
+  .lis   {
+	  width: 250px;
+	  height:400px
+
+  }
+  .readmore{
+	  width: 200px;
+
+
+  }
+  .denun{
+	  width: 100px;
+    height:450px
+  }
+  .crd-details h3{
+  width:200px;
+  }
+  .responsivePerro{
+width:200px;
+  }
+  .responsivePerroButton{
+  width:100px;
+
+  }
 }
 
 /* Adapatando pantallas moviles de : 768px */
