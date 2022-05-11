@@ -1,6 +1,6 @@
 {% extends "base/base.html" %}
 
-{% block titulo %} SABIA {% endblock %}
+
 {% block contenido %} 
 {% load static %}
 {% load pwa %}
@@ -85,11 +85,11 @@
 <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header"  style="background-color:#43914E;">
-        <h5 class="modal-title" id="exampleModalLabel"  style="color:white">Comunicado   </h5>
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"  style="color:#2C4430;margin-left:40%;">Nuevo Amigo </h5>
         <button type="button" class="btn-close" style="background-color:white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body"  style="background-color:#71AF22">
+      <div class="modal-body" style="margin-left:20%" >
                     {% for m in mascotas %}
    {% if forloop.first %}
                                         {% if m.imagen_mascota %}
@@ -98,7 +98,7 @@
                                         <img src="{% static 'adoptame1.png'  %}" class="img-fluid" >
                                         {% endif %}
                                             <h2>{{m.nombre}}</h2>
-                                            <a href="{% url 'pagina_adopciones' %}" style="color: #ffffff;">Leer Mas</a>
+                                            <a href="{% url 'pagina_adopciones' %}" style="color: black;">Leer Mas</a>
                                       {% endif %}
                                     {% endfor %}
       </div>
@@ -150,6 +150,7 @@
   <!-- Carousel End -->
 
     <!-- Banner Start -->
+
     <div class="container-fluid banner mb-5  responsive " >
       <div class="container">
           <div class="row gx-0">
@@ -194,6 +195,57 @@
   <!-- Banner Start -->
 
 
+<div class="container" style="margin-top:5%">
+    <div class="col mb-5">
+                        <h5 class="position-relative text-uppercase" style="text-align:center;color:#469150;">Trabajando en Beneficio de los Caninos </h5>
+                        <h1 class="display-5 mb-0" style="text-align:center;color:#2C4430" >Quienes Somos</h1>
+    </div>
+  <div class="row mt-0">
+    <div id="intro" class="col-sm-12 row spacer-b">
+      <div class="col-sm-6 d-flex flex-column justify-content-center">
+        <h1 style="color:#2C4430">Santuario Bienestar Animal </h1>
+        <p>
+          Erakomp Infonusa adalah perusahaan suplier barang-barang IT.<br> Termasuk didalamnya semua barang dan jasa yang berkaitan dengan teknologi informasi.<br> Kami melayani perusahaan, kantor pabrik, supermarket, pendidikan, bank, koperasi, asuransi,
+          hingga home user atau pengguna di rumah. Kami membantu mereka memberikan solusi dibidang IT, menyediakan barang-barang yang berkualitas, bergaransi, dengan harga terbaik.<br> Semenjak berdiri tahun 1988, hingga saat ini, kami telah dipercaya
+          untuk bekerja sama dengan berbagai vendor/produsen produk-produk IT. Para vendor tersebut memberikan dukungan sepenuhnya terhadap produk-produk yang dijual melalui erakomp.com. Dukungan yang diberikan berupa garansi terhadap produk maupun harga
+          yang bersaing
+        </p>
+      </div>
+      <div class="col-sm-6 order-xs-1">
+
+        <img src="{% static 'img/fondos/casadegradado.png' %}" alt="intro" class="img-fluid">
+      </div>
+    </div>
+    <div id="vision-mission" class="col-sm-12 row spacer-b">
+      <div class="col-sm-6">
+        <img src="{% static 'img/fondos/fondo_visio.png' %}" alt="our history" class="img-fluid responsive">
+      </div>
+      <div class="col-sm-6 d-flex flex-column justify-content-center">
+        <h1 style="color:#2C4430">Vision</h1>
+        <p>
+          Menjadi salah satu penyedia layanan dan perangkat IT terbaik dan terlengkap adalah visi kami
+        </p>
+      </div>
+    </div>
+    <div id="vision-mision" class="col-sm-12 row spacer-b">
+      <div class="col-sm-6 text-sm-right d-flex flex-column justify-content-center">
+        <h1 style="color:#2C4430">Mision</h1>
+        <p>
+          Dan untuk mewujudkan itu semua<br> kami akan berkomitmen<br> untuk menjaga kualitas SDM<br> meningkatkan sistem<br> menjaga mutu produk<br> dan menambah layanan sevice center<br> di seluruh indonesia
+        </p>
+      </div>
+      <div class="col-sm-6">
+        <img src="{% static 'img/fondos/Fondo_vision.png' %}" alt="vision mision" class="img-fluid">
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
   <!-- Titulo de la seccion  -->
   <div class="row" style="background-color: white;">
     <div class="col-md-12 heading" style="padding-left: 5%;padding-top: 2%;">
@@ -204,9 +256,8 @@
 
 
 <!-- NOTICIERO SABIA -->
-<section id="service" class="service "  style="background-color:
-#1c271f;margin-top: 3%;">
-<section id="main-container" style="background-color: rgb(255, 255, 255);" alt="slider">
+<section id="service" class="service containerNoticia "  style="margin-top: 3%;">
+<section id="main-container "  alt="slider">
    <!-- inicio del contenedor  -->
     <div class="container">
         <!-- Inicio del contendor de las columnas para el noticiero  -->
@@ -320,8 +371,7 @@
                       <hr>
                       <div class="tab-content" style="margin-left: 0%;">
                         
-                            <div class="tab-pane active" id="tab1" style="text-align: center;background-color: 
-                            #ffffff" >
+                            <div class="tab-pane active" id="tab1" style="text-align: center;" >
                     
 
                        <!-- CARUSEL DE DESAPARICIONES :: -->
@@ -330,13 +380,13 @@
                      <div class="col carousel-course-card wow zoomIn"  data-wow-delay="0.1s" data-flickity='{ "freescroll": true, "pageDots": false, "wrapAround": true }'  >
                         {% for m in denuncias %}
                     
-                      <div class=" carousel-course-card-cell"style="height: 500px;width: 500px;" >
+                      <div class=" carousel-course-card-cell"style="height: 400px;width: 400px;" >
                         <div class="card-cell-thumbnail">
                       
                             {% if m.imagen %}
                                     
                     
-                            <img src="media/{{ m.imagen }}" alt="{{m.imagen}}" class="img-fluid"  style="max-height: 300px;min-height: max-content;" >
+                            <img src="media/{{ m.imagen }}" alt="{{m.imagen}}" class="img-fluid"  style="max-height: 200px;min-height: max-content;" >
                     
                             
                             {% else %}
@@ -347,10 +397,8 @@
                         </div>
                         <div class="card-cell-content">
                             <div class="card-cell-text">
-                                <h2>{{m.nombres}}</h2>
-                            
-                                <h3>{{m.descripcion}}</h3>
 
+                                <h3>{{m.descripcion}}</h3>
                                 <h3>{{m.direcion}}</h3>
                                 <h3>{{m.telefono}}</h3>
                             </div>
@@ -450,7 +498,7 @@
             </div>
             <div class="col-lg-5" style="min-height: 500px;">
                 <div class="position-relative h-100" > 
-                    <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{% static 'img/Fondo_voluntariado.webp' %}" alt="fondo" style="object-fit: cover">
+                    <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{% static 'img/fondos/fondo_todos.png' %}" alt="fondo" style="object-fit: cover">
                 </div>
             </div>
         </div>
@@ -471,9 +519,11 @@
 </div><!--fin del titulo  -->  
 
 
+<div class="containerServicio">
 
-<div class="container">
-    <div class="row g-5">
+
+<div class="container  " >
+    <div class="row g-5" >
         <div class="col-lg-5">
   <div class="col pull-left  sm-text-center">
       <div class="team-overview">
@@ -483,14 +533,13 @@
               de vida de los animales , te inmersaras en un cambio cultural y convivenvia unica .</p>
       </div>
         <!-- extra -->
-  <a href="signup" class="pull-right btn btn-secundario white" style="padding-right: 14%;text-align: center;">    Aplicar ahora </a>
 
   </div><!-- /end col-md-4 -->
         </div>
   <div class="col carousel-course-card wow zoomIn"  data-wow-delay="0.1s" data-flickity='{ "freescroll": true, "pageDots": false, "wrapAround": true }'  >
     {% for m in voluntariado %}
 
-  <div class=" carousel-course-card-cell"style="height: 500px;width: 500px;" >
+  <div class=" carousel-course-card-cell"style="height: 300px;width: 300px;" >
     <div class="card-cell-thumbnail">
   
         {% if m.avatar %}
@@ -539,91 +588,24 @@
 </div>
 <!--FIN VOLUNTARIADO :: -->
 
-
-
-
-<!-- Titulo de la seccion  -->
-<div class="row" style="margin-top: 5%;" >
-  <div class="col-md-12 heading" style="padding-left: 5%;padding-top: 2%;padding-bottom: 5%;background-color: white;">
-      <span class="title-icon pull-left responsive"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
-      <h2 class="title">Sobre Nosotros  <span class="title-desc"> Misions y Vision  </span></h2>
-  </div>
-</div><!--fin del titulo  -->  
-
-
-<!-- QUIENES SOMOS  DE SABIA :: -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-7">
-
-            <div  class="col-lg-12"  >
-                <div class="card2 col" >
-                    <div class="card-content">
-                        <div class="card-body"  >   
-        
-                            <h3 style="color:rgb(44, 68, 48);text-align: center;">Quienes Somos </h3>
-                            <div class="shadow"></div>
-             
-                            <div class="card-subtitle">
-                                <p style="color:rgb(44, 68, 48)"> Donaiones Usando tu cartera electroinica virtual , Paypal  siendo una 
-        
-                                    alternativa en pocos pasos si ya tienes tu cuenta en paypal , puedes hacer las donaciones 
-                                    directamentes </p>
-                            </div>
-                        </div>
+    <!-- Offer Start -->
+        <div class="container " >
+            <div class="row justify-content-center">
+                <div class="col-lg-12 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="offer-text text-center rounded p-5">
+                        <h1 class="display-5 text-white">Juntos Podemos Ser mas </h1>
+                        <p class="text-white mb-4">Si quieres poder trabajar con nosotros encaminado en el bien de la Fundacion </p>
+                        <a href="appointment.html" class="btn btn-secundario py-3 px-5 me-3">Aplicar Ahora</a>
+                        <a href="" class="btn btn-light py-3 px-5">Ver mas </a>
                     </div>
-                </div>
-                </div>
-                <hr>
-                <div class="col-lg-12">
-                <div class="card2 col" >
-                    <div class="card-content">
-                        <div class="card-body">       
-                            <h3 style="color:rgb(44, 68, 48);text-align: center;">Mision </h3>
-                            <div class="card-subtitle">
-                                <p  style="color:rgb(44, 68, 48)"> 		Donaciones en efectivo
-                                    Si quieres donar directamente a una cuenta bancaria del Albergue
-                                     SABIA  para contribuir a cubrir a la sostenibilidad de 
-                                     nuestra obra social, puedes hacer una transferencia o depósito a 
-                                     las siguientes cuentas bancarias:</p>
-
-                                 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <hr>
-
-                <div class="col-lg-12">
-                <div class="card2 col">
-                    <div class="card-content">
-                        <div class="card-body">           
-        
-                            <h3  style="color:rgb(44, 68, 48); text-align: center;">Vision</h3>
-                            <div class="card-subtitle">
-                                <p  style="color:rgb(44, 68, 48)">Puedes agilizar la recuperacion de nuestras mascotas donando , camas , ropa , comida  </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-              
-
-            </div>
-     
-            <div class="col-lg-5" style="min-height: 500px;">
-                <div class="position-relative h-100" > 
-                    <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{% static 'img/Fondo_casaSabia.webp ' %}" alt="fondo" style="object-fit: cover">
                 </div>
             </div>
-    </div>
-    
-    </div>
+        </div>
 
-  
+    <!-- Offer End -->
 </div>
-<!-- FIN DE QUIENES SOMOS  -->
+
+
 
 
 
@@ -632,8 +614,8 @@
       <span class="title-icon pull-left responsive"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
       <h2 class="title">Donaciones  <span class="title-desc"> Ayudando a los mas Pequeños </span></h2>
   </div>
-  
-</div><!--fin del titulo  -->  
+
+</div><!--fin del titulo  -->
 
 
  <!-- Pricing Start -->
@@ -713,18 +695,21 @@
     </div>
 </div>
 <!-- Pricing End -->
-   
-<div class="container">
+   <div class="containerDonaciones">
+
+
+<div class="container ">
     <div class="col-lg-12 wow zoomIn" data-wow-delay="0.1s">
-        <div class="fondobanner d-flex flex-column p-5" style="height: 200px;">
-          <i class="fas fa-exclamation-circle " style="color: white;font-size: 50px;text-align: center;padding-bottom: 2%;">
-            <h3 class="text-white mb-3">Donaciones Directas </h3>
+        <div class=" d-flex flex-column p-5" style="height: 200px;">
+          <i class="fas fa-exclamation-circle " style="color: black;font-size: 50px;text-align: center;padding-bottom: 2%;">
+            <h3 class=" mb-3" style="color:black">Donaciones Directas </h3>
         </i>
          
     
         </div>
     </div>
-    <div class="col carousel-course-card" data-flickity='{ "freescroll": true, "pageDots": false, "wrapAround": true }'  >
+
+    <div class="col carousel-course-card " data-flickity='{ "freescroll": true, "pageDots": false, "wrapAround": true }'  >
       {% for m in donaciones %}
   
     <div class=" carousel-course-card-cell"style="height: 500px;width: 500px;" >
@@ -760,11 +745,11 @@
       {% endfor %}
     
     </div>
-  
+
   </div>
   
 
-
+   </div>
 <!-- Titulo de la seccion  -->
 <div class="row" style="background-color: white;">
   <div class="col-md-12 heading" style="padding-left: 5%;padding-top: 2%;">
@@ -776,15 +761,14 @@
 
 <div class="container " >
 
-         <div class="col">
-
+         <div class="col" >
+  <a href="https://www.worldpackers.com/es/positions/36380" target="_blank"   style="margin-left:15%">
              <img class="img-fluid wow zoomIn" data-wow-delay="0.1s" src="{% static 'img/worldpackers.webp' %}" alt="empresa" style="margin-bottom: 5%; margin-left:10%" width="25%" />
+    </a>
 
     </div>
-        <a href="https://www.worldpackers.com/es/positions/36380" target="_blank"   style="margin-left:15%">
 
-          <button class="btn btn-secundario"  > Conocer Mas </button>
-        </a>
+
 
 
 

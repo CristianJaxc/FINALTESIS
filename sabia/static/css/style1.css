@@ -88,6 +88,22 @@ background-position: center; /* Center the image */
 .fondobanner2{
     background-color: #71AF22;
 }
+.containerNoticia{
+/* background-image: url('/static/img/banner2.png');
+background-position: center; /* Center the image */
+/* background-repeat: no-repeat; /* Do not repeat the image */
+/* background-size: cover;  */
+   background: linear-gradient(rgba(255,255,255,255), rgba(255,255,255,0.1)), url('/static/img/Fondo_casaSabia.webp') center center no-repeat;
+    background-size: cover;
+}
+.containerServicio{
+   background: linear-gradient(rgba(255,255,255,255), rgba(255,255,255,0.1)), url('/static/img/Fondo_voluntariado.webp') center center no-repeat;
+    background-size: cover;
+}
+.containerDonaciones{
+ background: linear-gradient(rgba(255,255,255,255), rgba(255,255,255,0.1)), url('/static/img/Fondo_Perro.webp') center center no-repeat;
+    background-size: cover;
+}
 
 .btn {
     font-family: 'Jost', sans-serif;
