@@ -23,8 +23,6 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Instalacion de appweb-->
 
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
@@ -192,13 +190,14 @@
 </div>
 
 
+
     </H2>
     <div class="collapse navbar-collapse" id="navbarCollapse" >
       <a href="{% url 'home' %}" class="navbar-brand p-0">
         <img src="{% static 'img/logosabia.webp' %}" style="width: 40%; margin-left: -20px;" alt="logo">
       </a>
         <div class="navbar-nav ms-auto py-0">
-            <a href="{% url 'home' %}" class="nav-item nav-link active">Inicio</a>
+            <a href="{% url 'home' %}" class="nav-item nav-link active ">Inicio</a>
             <a href="{% url 'pagina_denuncias' %}" class="nav-item nav-link">Denuncias </a>
             <a href="{% url 'pagina_donaciones' %}" class="nav-item nav-link">Donaciones</a>
             <div class="nav-item dropdown">
@@ -313,7 +312,7 @@
 {% get_available_languages as LANGUAGES %}
 {% get_language_info_list for LANGUAGES as languages %}
 <!-- Style switcher start -->
-<div class="style-switch-wrapper" style="background-color:#469150d2;">
+<div class="style-switch-wrapper"   style="background-color:#469150d2;">
   <div class="style-switch-button" style="background-color:#469150;border-style: solid;border-color: white;"> 
     <i class="fa fa-globe" aria-hidden="true"  type="submit" value="{{language.code}}" name="language"></i>
   </div>
@@ -430,6 +429,8 @@
 
 </body>
 <!-- FIN DE SECCION BODY  -->
+
+
 <!-- INICIO DE SECCION FOOTER O PIE DE PAGINA  -->
 <!-- End of .container -->
 <script type="text/javascript" src="{% static 'lib/wow/wow.min.js' %}"></script>

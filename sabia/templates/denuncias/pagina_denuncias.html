@@ -7,8 +7,7 @@
 
 {% block contenido %}
 
-<link rel="stylesheet" href="{% static 'css/denun1.css' %}">
-
+<link rel="stylesheet" href="{% static 'css/denun.css' %}">
 
 <body>
    
@@ -187,41 +186,60 @@
     </div>
   </div><!--fin del titulo  -->  
 
-  <div class="container">
-    <div  class="row" >
-        {% for i in denuncias %}
 
-        <ul class="denun" style="padding:  5%; ">
-          <li class="lis" style="padding: 3%;">
-            {% if i.imagen %}
-            <img src="/media/{{i.imagen}}" alt="{{i.imagen}}"  style="max-height: 120px;min-height: max-content;" >
+
+<div class="container1">
+  <!-- Normal Demo-->
+    {% for i in denuncias %}
+  <div class="column">
+    <div class="demo-title"></div>
+    <!-- Post-->
+    <div class="post-module">
+      <!-- Thumbnail-->
+      <div class="thumbnail">
+        <div class="date">
+          <div class="day">27</div>
+          <div class="month">Mar</div>
+        </div>
+          {% if i.imagen %}
+            <img src="/media/{{i.imagen}}" alt="{{i.imagen}}"  >
             {% else %}
             <img src="{% static 'img/casaSabia.jpg ' %}"   alt="SABIA">
             {% endif %}
-            <div class="crd-details">
-            <h3 >{{i.nombres }}</h3>
-            <p >{{i.descripcion}}</p>
-            <p >{{i.direccion}}</p>
-              <div class="readmore" >Ver mas<span>→</span></div>
-            </div>
-          </li>
-
-        </ul>
-        {% endfor %}
-
-       </div>
-  </div>
-
-
-
-  
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-  <hr>
+      </div>
+      <!-- Post Content-->
+      <div class="post-content">
+        <div class="category">{{i.nombres }}</div>
+        <h1 class="title">{{i.descripcion}}</h1>
+        <h2 class="sub_title">{{i.direccion}}</h2>
+        <p class="description">New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.</p>
+        <div class="post-meta"><span class="timestamp"><i class="fa fa-clock-">o</i> </span><span class="comments"><i class="fa fa-comments"></i><a href="#"> </a></span></div>
+      </div>
     </div>
-</div> 
+     </div>
+    {% endfor %}
+
+
+
+</div>
+ <div style="margin:25px;">
+
+ </div>
+ <script>
+ $(window).load(function() {
+  $('.post-module').hover(function() {
+    $(this).find('.description').stop().animate({
+      height: "toggle",
+      opacity: "toggle"
+    }, 300);
+  });
+});
+
+ </script>
 {% endblock contenido %}
 </body>
+
+
 </html>
 
 

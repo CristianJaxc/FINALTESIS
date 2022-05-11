@@ -12,6 +12,13 @@
 
     <title>Administracion </title>
 
+        <!--intro-->
+<link href="https://unpkg.com/intro.js/minified/introjs.min.css" rel="stylesheet">
+<link href="https://unpkg.com/intro.js/themes/introjs-modern.css" rel="stylesheet">
+
+
+
+    <!--fin intro-->
     <!-- Custom fonts for this template-->
     <link href="{% static 'lib/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
  
@@ -82,14 +89,14 @@
             <li class="nav-item active">
                 <a class="nav-link">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Listado de Opciones</span></a>
+                    <span class="">Listado de Opciones</span></a>
             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <div class="sidebar-heading tuto">
                 Gestion de Usuarios
             </div>
 
@@ -108,7 +115,7 @@
                  
                      
 
-                        <a class="collapse-item" href="{% url 'listado_usuarios' %}">Gestion de Usuarios </a>
+                        <a class="collapse-item "  href="{% url 'listado_usuarios' %}">Gestion de Usuarios </a>
                         <a class="collapse-item" href="{% url 'listado_blogs' %}">Gestion de blog</a>
                         {% endif %}
 
@@ -126,7 +133,7 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Edicion / Creacion </h6>
+                        <h6 class="collapse-header ">Edicion / Creacion </h6>
 
 
                         {% if user.is_superuser %}
@@ -148,7 +155,7 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <div class="sidebar-heading tuto2">
             Gestiones del Sitio Web 
             </div>
 
@@ -164,17 +171,15 @@
 
 
                     
-     
 
 
                         <h6 class="collapse-header">Gestiones </h6>
-
-                        <a class="collapse-item" href="{% url 'denuncias_listado' %}">Gestion denuncias</a>
+                        <a class="collapse-item tutoGes  "data-title="Hey" data-intro="This is a login button" href="{% url 'denuncias_listado' %}">Gestion denuncias</a>
                         <a class="collapse-item" href="{% url 'contacto_listado' %}">Gestion Contactos</a>
                  
         
                         <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Albergue </h6>
+                        <h6 class="collapse-header ">Albergue </h6>
                         <a class="collapse-item" href="{% url 'adopciones_listado' %}">Gestion adopciones</a>
                         <a class="collapse-item" href="{% url 'listado_perro' %}">Gestion de Perros</a>
                      
@@ -188,7 +193,7 @@
             </li>
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
+            <li class="nav-item tuto3">
                 <a class="nav-link" href="{% url 'registrar_blogs' %}">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Registrar blogs</span></a>
@@ -209,7 +214,7 @@
             <div class="sidebar-card d-none d-lg-flex">
                 <img class="sidebar-card-illustration mb-2" src="{% static 'img/albergue1.png ' %}"  alt="SABIA">
                 <p class="text-center mb-2"><strong>En bien de los caninos de Latacunga </strong> SABIA -2022</p>
-                <a class="btn btn-success btn-sm" href="">Compartir Sitio </a>
+                <a class="btn btn-success btn-sm "  href="">Compartir Sitio </a>
             </div>
 
         </ul>
@@ -317,7 +322,7 @@ Administracion
                 <!-- Begin Page Content -->
         
     {% block contenido %}
-   
+
     {% endblock contenido %}
                 <!-- /.container-fluid -->
 
@@ -391,6 +396,32 @@ Administracion
 
 </body>
 <!-- REFERENCIA JS -->
+
+<!-- TUTOS SCRIPS  -->
+<script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+<script>
+introJs().setOptions({
+       steps:[
+         {intro:"Bienvenido al modulo de Administradores "},
+         {element: document.querySelector('.tuto'),
+          intro:'<p>Aqui puedes Editar,Crear y Eliminar a los voluntarios " </p>',
+          position: "top"},
+          {element: document.querySelector('.tuto2'),
+          intro:'<p>Dentro de esta seccion puedes ver las posibls ayudas y denuncias  " </p>',
+          position: "top"},
+          {element: document.querySelector('.tuto3'),
+          intro:'<p>Si quieres dejar una reseña en el sitio , puedes hacerlo aqui " </p>',
+          position: "top"}
+       ],
+
+       tooltipClass:"GUI",
+       showProgress:true,
+       showBullets:false,
+       disableIteraction:true
+     }).start();
+     introJS.addHints();
+</script>
+
 
   <!-- Bootstrap core JavaScript-->
   <script src="{% static 'lib/vendor/jquery/jquery.min.js' %}"></script>
