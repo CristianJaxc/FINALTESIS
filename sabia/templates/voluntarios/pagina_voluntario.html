@@ -49,7 +49,7 @@
  -->
 
 
- <body id="page-top"  >
+ <body id="page-top" style="background-color:#43914E;" >
        <!-- Page Wrapper -->
        
     <div id="wrapper">
@@ -221,15 +221,16 @@
             <div id="content" style="background-color:white;">
 
                 <!-- Topbar -->
-                <nav class=" navbar navbar-expand navbar-light color1 topbar mb-4 static-top shadow">
+                <nav class=" navbar navbar-expand navbar-light  topbar mb-4 static-top shadow" style="background-color:#72CF7F;">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
+                        <i class="fa fa-bars" style="color:white;"></i>
                     </button>
 
              
-<h3 style="margin-left:5%;color:white">{% block tema %}
+<h3 style="margin-left:5%;color:white">
+    {% block tema %}
 
 Administracion
 {% endblock tema %}
@@ -282,10 +283,10 @@ Administracion
                           <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline  small">
+                                <span class="mr-2 d-none d-lg-inline  small" style="color:white;">
                                     {{user.username}}
                                 </span>
-                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <i class="fas fa-user fa-sm fa-fw mr-2 " style="color:white;"></i>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

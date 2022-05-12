@@ -2,9 +2,9 @@
 
  {% extends "voluntarios/pagina_voluntario.html" %}
  {% load static %}
- <h2>{% block tema %}</h2>
- Perfil de Usuario 
-  {% endblock tema %}
+ {% block tema %}
+ Perfil de Usuario
+  % endblock tema %}
  {% block contenido %}
  <head>
      <link href="{% static 'css/perfil.css' %}" rel="stylesheet">
