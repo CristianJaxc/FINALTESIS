@@ -1,18 +1,149 @@
 {% extends "denuncias/pagina_denuncias.html" %}
-
-
+{% load static %}
+{% block titulo %} Quienes Somos {% endblock %}
 {% block contenido %}
 
 <body>
+
  <!-- Hero Start -->
  <div class="container-fluid colorFondo1 py-5  mb-5">
     <div class="row py-3" >
         <div class="col-12 text-center">
-            <h1 class="display-3 text-white animated zoomIn">Contactos</h1>
-         
+            <h1 class="display-3 text-white animated zoomIn">Quienes Somos</h1>
+
         </div>
     </div>
 </div>
+
+<div class="container">
+<!-- Titulo de la seccion  -->
+<div class="row" style="margin-top: 5%;" >
+    <div class="col-md-12 heading" style="padding-left: 5%;padding-top: 2%;padding-bottom: 5%;background-color: white;">
+        <span class="title-icon pull-left responsive "><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
+        <h2 class="title">Mision - Vision  <span class="title-desc"> Voluntariado Sabia   </span></h2>
+    </div>
+  </div><!--fin del titulo  -->
+
+ <!-- Testimonial Start -->
+
+ <div class="container">
+    <div class="row mt-0">
+    <div id="intro" class="col-sm-12 row spacer-b">
+      <div class="col-sm-6 d-flex flex-column justify-content-center">
+        <h1 style="color:#2C4430">Santuario Bienestar Animal </h1>
+        <p>
+          Erakomp Infonusa adalah perusahaan suplier barang-barang IT.<br> Termasuk didalamnya semua barang dan jasa yang berkaitan dengan teknologi informasi.<br> Kami melayani perusahaan, kantor pabrik, supermarket, pendidikan, bank, koperasi, asuransi,
+          hingga home user atau pengguna di rumah. Kami membantu mereka memberikan solusi dibidang IT, menyediakan barang-barang yang berkualitas, bergaransi, dengan harga terbaik.<br> Semenjak berdiri tahun 1988, hingga saat ini, kami telah dipercaya
+          untuk bekerja sama dengan berbagai vendor/produsen produk-produk IT. Para vendor tersebut memberikan dukungan sepenuhnya terhadap produk-produk yang dijual melalui erakomp.com. Dukungan yang diberikan berupa garansi terhadap produk maupun harga
+          yang bersaing
+        </p>
+      </div>
+      <div class="col-sm-6 order-xs-1">
+
+        <img src="{% static 'img/fondos/casadegradado.png' %}" alt="intro" class="img-fluid">
+      </div>
+    </div>
+    <div id="vision-mission" class="col-sm-12 row spacer-b">
+      <div class="col-sm-6">
+        <img src="{% static 'img/fondos/fondo_visio.png' %}" alt="our history" class="img-fluid responsive">
+      </div>
+      <div class="col-sm-6 d-flex flex-column justify-content-center">
+        <h1 style="color:#2C4430">Vision</h1>
+        <p>
+          Menjadi salah satu penyedia layanan dan perangkat IT terbaik dan terlengkap adalah visi kami
+        </p>
+      </div>
+    </div>
+    <div id="vision-mision" class="col-sm-12 row spacer-b">
+      <div class="col-sm-6 text-sm-right d-flex flex-column justify-content-center">
+        <h1 style="color:#2C4430">Mision</h1>
+        <p>
+          Dan untuk mewujudkan itu semua<br> kami akan berkomitmen<br> untuk menjaga kualitas SDM<br> meningkatkan sistem<br> menjaga mutu produk<br> dan menambah layanan sevice center<br> di seluruh indonesia
+        </p>
+      </div>
+      <div class="col-sm-6">
+        <img src="{% static 'img/fondos/Fondo_vision.png' %}" alt="vision mision" class="img-fluid">
+      </div>
+    </div>
+
+
+  </div>
+
+
+    </div>
+
+
+<!-- Testimonial End -->
+<!-- Titulo de la seccion  -->
+<div class="row" style="margin-top: 5%;" >
+    <div class="col-md-12 heading" style="padding-left: 5%;padding-top: 2%;padding-bottom: 5%;background-color: white;">
+        <span class="title-icon pull-left responsive "><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
+        <h2 class="title">Grupo Sabia   <span class="title-desc"> Voluntariado Sabia   </span></h2>
+    </div>
+  </div><!--fin del titulo  -->
+
+  <!-- Team Start -->
+  <div class="container-fluid py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.1s">
+                <div class="section-title bg-light rounded h-100 p-5">
+
+                    <h1 class="display-6 mb-4">Contamos con Voluntariado Internacional </h1>
+                    <a href="appointment.html" class="btn btn-primary py-3 px-5">Conocer Mas</a>
+                </div>
+            </div>
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                <div class="team-item">
+                    <div class="position-relative rounded-top" style="z-index: 1;">
+
+
+
+
+                        <img class="img-fluid rounded-top w-100" src="{% static 'img/dueño.jpg' %}" alt="">
+                        <div class="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
+                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
+                        <h4 class="mb-2">Fausto Subia  </h4>
+                        <p class="text-primary mb-0">Administrador Sabia </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                <div class="team-item">
+                    <div class="position-relative rounded-top" style="z-index: 1;">
+                        <img class="img-fluid rounded-top w-100" src="{% static 'img/dueño.jpg ' %}" alt="">
+                        <div class="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
+                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
+                        <h4 class="mb-2">Cristian Acosta </h4>
+                        <p class="text-primary mb-0">Administrador Sabia </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+
+</div>
+
+
+
 <div class="container-fluid py-5">
     <div class="container">
 <div class="row g-5">
@@ -74,3 +205,6 @@
 
 </body>
 {% endblock contenido %}
+
+
+

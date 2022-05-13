@@ -83,6 +83,7 @@ WSGI_APPLICATION = 'sabia.wsgi.application'
 
 DATABASES = {
     'default': {
+
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'SabiaFinalDB',
             'USER': 'super',

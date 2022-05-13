@@ -255,3 +255,54 @@
 .container1 .info span .fa {
   color: #e74c3c;
 }
+#whastseven{
+    position:fixed;
+    bottom:140px;
+    right:25px;
+    sadf adsf
+}
+#whastseven  .icon{
+    width:60px;
+    height:60px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    box-shadow: 1px 1px 2px #888;
+    z-index:1000;
+    float:right;
+    transition: transform .2s; /* animação */
+ }
+ #whastseven .icon:hover{
+    transform: scale(1.1);
+ }
+#whastseven #msg{
+    background-color: #FFF !important;
+    border-radius: 5px !important;
+    box-shadow: rgba(0, 0, 0, 0.342) 0px 2.5px 10px !important;
+    color: #000;
+    font-size: 18px;
+    width: 260px;
+    padding: 10px 5px;
+    right:20px;
+    margin: 0 50px 0 0;
+    display:block;
+}
+#whastseven #msg button{
+    float: right;
+    border: 0px;
+    background-color: rgba(255,255,255,0.8);
+    top: -6px;
+    position: relative;
+    right: -4px;
+}
+#whastseven #msg button:hover{
+  color:red;
+}
+
+
+ @media (max-width: 700px)
+ {
+   #whastseven p{ display:none;}
+}

@@ -4,6 +4,15 @@
 {% block head %}
 <head>
 
+   <!-- Compartir sitio a Facebook-->
+    <meta property="og:url"           content="http://cristiansabia.pythonanywhere.com/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Santuario Bienestar Animal " />
+    <meta property="og:description"   content="Fundacion en bien de la proteccion canina " />
+    <meta property="og:image"         content="http://cristiansabia.pythonanywhere.com/" />
+
+   <!-- FIN DE COMPARTIR-->
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -211,11 +220,18 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
+
+
+
+
+
+
             <!-- Sidebar Message -->
             <div class="sidebar-card d-none d-lg-flex">
                 <img class="sidebar-card-illustration mb-2" src="{% static 'img/albergue1.png ' %}"  alt="SABIA">
                 <p class="text-center mb-2"><strong>En bien de los caninos de Latacunga </strong> SABIA -2022</p>
-                <a class="btn btn-success btn-sm "  href="">Compartir Sitio </a>
+                <a class="btn btn-success btn-sm fb-share-button " data-href="http://cristiansabia.pythonanywhere.com/"
+data-layout="button_count">Compartir Sitio </a>
             </div>
 
         </ul>
@@ -440,6 +456,18 @@ $(document).ready(function() {
 
 } );
 </script>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your share button code -->
 <!--fin datatable-->
   <script src="{% static 'lib/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 

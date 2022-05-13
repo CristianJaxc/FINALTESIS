@@ -86,6 +86,8 @@
 
 
 <body >
+
+
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
       <div class="spinner-grow color m-1" role="status">
@@ -198,16 +200,42 @@
       </a>
         <div class="navbar-nav ms-auto py-0">
             <a href="{% url 'home' %}" class="nav-item nav-link active ">Inicio</a>
-            <a href="{% url 'pagina_denuncias' %}" class="nav-item nav-link">Denuncias </a>
-            <a href="{% url 'pagina_donaciones' %}" class="nav-item nav-link">Donaciones</a>
-            <div class="nav-item dropdown">
+                 <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Sobre Nosotros</a>
                 <div class="dropdown-menu m-0">
-                    <a href="{% url 'quienes_somos' %}" class="dropdown-item">Mision / Vision </a>
-                    <a href="{% url 'contacto_registrar' %}" class="dropdown-item">Contactos</a>
-                
+                    <a href="{% url 'quienes_somos' %}" class="dropdown-item">Labor Diario  </a>
+                    <a href="{% url 'contacto_registrar' %}" class="dropdown-item">Quienes Somos </a>
+
                 </div>
             </div>
+            <a href="{% url 'pagina_denuncias' %}" class="nav-item nav-link">Denuncias </a>
+
+
+
+    <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Servicios</a>
+                <div class="dropdown-menu m-0">
+                    <a href="" class="dropdown-item">Tienda SABIA </a>
+                    <a href="" class="dropdown-item">Esterilizacion</a>
+
+                </div>
+            </div>
+
+
+
+
+                  <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Donaciones</a>
+                <div class="dropdown-menu m-0">
+                    <a href="" class="dropdown-item">Apadrinamiento </a>
+                    <a href="{% url 'pagina_donaciones' %}" class="dropdown-item">Donaciones Directas</a>
+
+                </div>
+            </div>
+
+
+
+
             <a href="{% url 'pagina_adopciones' %}" class="nav-item nav-link">Adopciones</a>
             <a href="{% url 'pagina_blogs' %}" class="nav-item nav-link">Voluntariado</a>
         </div>

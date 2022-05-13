@@ -1,145 +1,279 @@
 {% extends "denuncias/pagina_denuncias.html" %}
 {% load static %}
-{% block titulo %} Informacion {% endblock %}
+{% block titulo %} Nuestra Labor Diario {% endblock %}
 {% block contenido %}
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <link rel="stylesheet" href="{% static 'css/labor/labor.css' %}">
+</head>
 <body>
- <!-- Hero Start -->
- <div class="container-fluid colorFondo1 py-5  mb-5">
+         <!-- Hero Start -->
+ <div class="container-fluid colorFondo2 py-5  mb-5">
     <div class="row py-3" >
         <div class="col-12 text-center">
-            <h1 class="display-3 text-white animated zoomIn">Quienes Somos</h1>
+            <h1 class="display-3 text-white animated zoomIn">Nuestra Labor </h1>
 
         </div>
     </div>
 </div>
 
-<div class="container">
-<!-- Titulo de la seccion  -->
-<div class="row" style="margin-top: 5%;" >
-    <div class="col-md-12 heading" style="padding-left: 5%;padding-top: 2%;padding-bottom: 5%;background-color: white;">
-        <span class="title-icon pull-left responsive "><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
-        <h2 class="title">Mision - Vision  <span class="title-desc"> Voluntariado Sabia   </span></h2>
-    </div>
-  </div><!--fin del titulo  -->  
-  
- <!-- Testimonial Start -->
- 
- <div class="container">
-    <div class="row mt-0">
-    <div id="intro" class="col-sm-12 row spacer-b">
-      <div class="col-sm-6 d-flex flex-column justify-content-center">
-        <h1 style="color:#2C4430">Santuario Bienestar Animal </h1>
-        <p>
-          Erakomp Infonusa adalah perusahaan suplier barang-barang IT.<br> Termasuk didalamnya semua barang dan jasa yang berkaitan dengan teknologi informasi.<br> Kami melayani perusahaan, kantor pabrik, supermarket, pendidikan, bank, koperasi, asuransi,
-          hingga home user atau pengguna di rumah. Kami membantu mereka memberikan solusi dibidang IT, menyediakan barang-barang yang berkualitas, bergaransi, dengan harga terbaik.<br> Semenjak berdiri tahun 1988, hingga saat ini, kami telah dipercaya
-          untuk bekerja sama dengan berbagai vendor/produsen produk-produk IT. Para vendor tersebut memberikan dukungan sepenuhnya terhadap produk-produk yang dijual melalui erakomp.com. Dukungan yang diberikan berupa garansi terhadap produk maupun harga
-          yang bersaing
-        </p>
-      </div>
-      <div class="col-sm-6 order-xs-1">
-
-        <img src="{% static 'img/fondos/casadegradado.png' %}" alt="intro" class="img-fluid">
-      </div>
-    </div>
-    <div id="vision-mission" class="col-sm-12 row spacer-b">
-      <div class="col-sm-6">
-        <img src="{% static 'img/fondos/fondo_visio.png' %}" alt="our history" class="img-fluid responsive">
-      </div>
-      <div class="col-sm-6 d-flex flex-column justify-content-center">
-        <h1 style="color:#2C4430">Vision</h1>
-        <p>
-          Menjadi salah satu penyedia layanan dan perangkat IT terbaik dan terlengkap adalah visi kami
-        </p>
-      </div>
-    </div>
-    <div id="vision-mision" class="col-sm-12 row spacer-b">
-      <div class="col-sm-6 text-sm-right d-flex flex-column justify-content-center">
-        <h1 style="color:#2C4430">Mision</h1>
-        <p>
-          Dan untuk mewujudkan itu semua<br> kami akan berkomitmen<br> untuk menjaga kualitas SDM<br> meningkatkan sistem<br> menjaga mutu produk<br> dan menambah layanan sevice center<br> di seluruh indonesia
-        </p>
-      </div>
-      <div class="col-sm-6">
-        <img src="{% static 'img/fondos/Fondo_vision.png' %}" alt="vision mision" class="img-fluid">
-      </div>
-    </div>
-
-
-  </div>
-
-    
-    </div>
-
-  
-<!-- Testimonial End -->
-<!-- Titulo de la seccion  -->
-<div class="row" style="margin-top: 5%;" >
-    <div class="col-md-12 heading" style="padding-left: 5%;padding-top: 2%;padding-bottom: 5%;background-color: white;">
-        <span class="title-icon pull-left responsive "><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span>
-        <h2 class="title">Grupo Sabia   <span class="title-desc"> Voluntariado Sabia   </span></h2>
-    </div>
-  </div><!--fin del titulo  -->  
-  
-  <!-- Team Start -->
-  <div class="container-fluid py-5">
+<!-- About Start -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
         <div class="row g-5">
-            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.1s">
-                <div class="section-title bg-light rounded h-100 p-5">
-                  
-                    <h1 class="display-6 mb-4">Contamos con Voluntariado Internacional </h1>
-                    <a href="appointment.html" class="btn btn-primary py-3 px-5">Conocer Mas</a>
+            <div class="col-lg-5" style="min-height: 500px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s"
+                         src="{% static 'img/Fondo_casaSabia.webp' %}" style="object-fit: cover;">
                 </div>
-            </div>
-            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                <div class="team-item">
-                    <div class="position-relative rounded-top" style="z-index: 1;">
-
-                     
 
 
-                        <img class="img-fluid rounded-top w-100" src="{% static 'img/dueño.jpg' %}" alt="">
-                        <div class="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-instagram fw-normal"></i></a>
-                        </div>
+            </div>
+            <div class="col-lg-7">
+
+
+                <p class="mb-4" style="text-align:justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Architecto est eum ex exercitationem facere, fuga illum ipsa magni numquam reiciendis reprehenderit
+                    sapiente unde. Eveniet iusto laboriosam nesciunt porro temporibus vel.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto est eum ex exercitationem
+                    facere, fuga illum ipsa magni numquam reiciendis reprehenderit sapiente unde. Eveniet iusto
+                    laboriosam nesciunt porro temporibus vel.
+                </p>
+                <div class="row g-3">
+                    <div class="col-sm-6 wow zoomIn" data-wow-delay="0.3s">
+
                     </div>
-                    <div class="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
-                        <h4 class="mb-2">Fausto Subia  </h4>
-                        <p class="text-primary mb-0">Administrador Sabia </p>
+                    <div class="col-sm-6 wow zoomIn" data-wow-delay="0.6s">
+
+
                     </div>
                 </div>
+
             </div>
-            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-                <div class="team-item">
-                    <div class="position-relative rounded-top" style="z-index: 1;">
-                        <img class="img-fluid rounded-top w-100" src="{% static 'img/dueño.jpg ' %}" alt="">
-                        <div class="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                            <a class="btn btn-primary btn-square m-1" href="#"><i class="fab fa-instagram fw-normal"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-text position-relative bg-light text-center rounded-bottom p-4 pt-5">
-                        <h4 class="mb-2">Cristian Acosta </h4>
-                        <p class="text-primary mb-0">Administrador Sabia </p>
-                    </div>
-                </div>
-            </div>
-          
-        
-          
+
         </div>
     </div>
 </div>
-<!-- Team End -->
-  
+<!-- About End -->
 
+
+<!-- Appointment Start -->
+<div class="container-fluid containerNoticia my-5 wow fadeInUp" data-wow-delay="0.1s" style="padding:5%;">
+    <div class="container">
+        <div class="row gx-5">
+            <div class="col-lg-6 py-5">
+                <div class="py-5">
+                    <h1 class="display-5 text-white mb-4">Conoce como es Sabia por dentro </h1>
+                    <p class="text-white mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aut consectetur eligendi est excepturi ipsam, iusto maiores minus nemo neque odio porro praesentium quidem saepe, similique sit sunt voluptatem. Totam.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="appointment-form h-100  wow zoomIn"
+                     data-wow-delay="0.6s">
+                    <div class="video-wrapper">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="play-button">
+                            <i class="fa fal fa-play-circle"></i>
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="video">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <!-- Video by Ricardo Esquivel from Pexels -->
+                                        <iframe allowfullscreen="" frameborder="0" mozallowfullscreen=""
+                                                src="//player.vimeo.com/video/324179796?title=0&amp;portrait=0&amp;byline=0&amp;autoplay=1"
+                                                webkitallowfullscreen=""></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-backdrop fade"></div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<!-- Appointment End -->
+
+
+<!-- Service Start -->
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row g-5 mb-5">
+            <div class="col-lg-5 wow zoomIn" data-wow-delay="0.3s" style="min-height: 400px;">
+                <div class="twentytwenty-container position-relative h-100 rounded overflow-hidden">
+                    <img class="position-absolute w-100 h-100" src="{% static 'img/Fondo_voluntariado.webp' %}" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100" src="{% static 'img/Fondo_casaSabia.webp' %}"style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="section-title mb-5">
+
+                    <h1 class="display-5 mb-0">Como sabia Ha cambiado la vida de muchos Perros</h1>
+                </div>
+                <div class="row g-5">
+                    <div class="col-md-6 service-item wow zoomIn" data-wow-delay="0.6s">
+                        <div class="rounded-top overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/Fondo_Perro.webp' %}" alt="">
+                        </div>
+                        <div class="position-relative bg-light rounded-bottom text-center p-4">
+                            <h5 class="m-0">Historia de Lucaz</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6 service-item wow zoomIn" data-wow-delay="0.9s">
+                        <div class="rounded-top overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/Fondo_voluntariado.webp' %}" alt="">
+                        </div>
+                        <div class="position-relative bg-light rounded-bottom text-center p-4">
+                            <h5 class="m-0">Historia de Negro</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-7">
+                <div class="row g-5">
+                    <div class="col-md-6 service-item wow zoomIn" data-wow-delay="0.3s">
+                        <div class="rounded-top overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/Fondo_Perro.webp' %}" alt="">
+                        </div>
+                        <div class="position-relative bg-light rounded-bottom text-center p-4">
+                            <h5 class="m-0">Historia de Nieve</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6 service-item wow zoomIn" data-wow-delay="0.6s">
+                        <div class="rounded-top overflow-hidden">
+                            <img class="img-fluid" src="{% static 'img/Fondo_voluntariado.webp' %}" alt="">
+                        </div>
+                        <div class="position-relative bg-light rounded-bottom text-center p-4">
+                            <h5 class="m-0">Historia de Pau</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 service-item wow zoomIn" data-wow-delay="0.9s">
+                <div class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-4">
+                    <h3 class="text-white mb-3">Puedes Impusal nuestra labor </h3>
+                    <p class="text-white mb-3">Conoce los Planes que tenemos para Donaciones </p>
+                 <a href="" class="btn btn-light py-3 px-5">Leer mas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+<!-- Vertical Timeline -->
+  <section id="conference-timeline">
+    <div class="timeline-start">Inicio </div>
+    <div class="conference-center-line"></div>
+    <div class="conference-timeline-content">
+      <!-- Article -->
+      <div class="timeline-article">
+        <div class="content-left-container">
+          <div class="content-left">
+            <p>Procedemos a preparar el alimento a las 5.30 de la mañana  <span class="article-number">01</span></p>
+          </div>
+
+        </div>
+        <div class="content-right-container">
+          <div class="content-right">
+            <p>Cuando verificamos que este todo de acorde pasamos a la distribucion  <span class="article-number">02</span></p>
+          </div>
+
+        </div>
+        <div class="meta-date">
+          <span class="date"><li class="fas fa-bone" style="margin-top:25%;"></li></span>
+
+        </div>
+      </div>
+      <!-- // Article -->
+
+      <!-- Article -->
+      <div class="timeline-article">
+        <div class="content-left-container">
+          <div class="content-left">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem commodi enim, eveniet excepturi fugit harum incidunt laborum nobis numquam odit optio pariatur perferendis quos reprehenderit sequi soluta vitae. Doloremque, earum. <span class="article-number">03</span></p>
+          </div>
+
+        </div>
+        <div class="content-right-container">
+          <div class="content-right">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium autem consectetur expedita, ipsum libero quisquam saepe voluptatem. Accusamus accusantium, aspernatur, deleniti dolor ducimus harum nemo quae quod repellat reprehenderit ut! <span class="article-number">04</span></p>
+          </div>
+
+        </div>
+        <div class="meta-date">
+          <span class="date"><li class="fas fa-bone" style="margin-top:25%;"></li></span>
+
+        </div>
+      </div>
+      <!-- // Article -->
+
+      <!-- Article -->
+      <div class="timeline-article">
+        <div class="content-left-container">
+          <div class="content-left">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at consequatur corporis delectus ea eius expedita impedit ipsa ipsum itaque laudantium natus neque obcaecati praesentium quam, quidem repellendus reprehenderit repudiandae? <span class="article-number">05</span></p>
+          </div>
+
+        </div>
+        <div class="content-right-container">
+          <div class="content-right">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est mollitia quisquam tenetur voluptates? Odio, reprehenderit voluptatem. Dicta esse eum, iure labore mollitia neque nulla optio quibusdam quo, sed similique voluptatum? <span class="article-number">06</span></p>
+          </div>
+
+        </div>
+        <div class="meta-date">
+          <span class="date"><li class="fas fa-bone" style="margin-top:25%;"></li></span>
+
+        </div>
+      </div>
+      <!-- // Article -->
+    </div>
+    <div class="timeline-end">Fin</div>
+  </section>
+  <!-- // Vertical Timeline -->
+
+
 
 </body>
+<script>
+    var videoId = document.querySelector(".play-button");
+var modalClass = document.querySelector("#video");
+var modOverlay = document.querySelector(".modal-backdrop");
+var bodyAttr = document.body;
+
+videoId.addEventListener("click", function (e) {
+  e.stopPropagation();
+  modalClass.classList.add("show");
+  modOverlay.classList.add("show");
+  setTimeout(function () {
+    modalClass.classList.add("in");
+  }, 80);
+});
+
+bodyAttr.addEventListener("click", function () {
+  modalClass.classList.remove("in");
+  setTimeout(function () {
+    modOverlay.classList.remove("show");
+    modalClass.classList.remove("show");
+  }, 130);
+});
+
+modalClass.children[0].addEventListener("click", function (e) {
+  e.stopPropagation();
+});
+
+
+</script>
+</html>
 {% endblock contenido %}

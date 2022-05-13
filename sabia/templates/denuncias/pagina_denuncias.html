@@ -7,7 +7,7 @@
 
 {% block contenido %}
 
-<link rel="stylesheet" href="{% static 'css/denun.css' %}">
+<link rel="stylesheet" href="{% static 'css/denuncia.css' %}">
 
 <body>
    
@@ -79,6 +79,19 @@
     </div>
 </div>
 <!-- Service End -->
+<div id='whastseven'>
+<div id="msg"><button onclick="fecharwhastb()">X</button>
+  Reportanos . <br> envianos un mensaje directo
+
+</div>
+
+<a class="icon" href="https://wa.me/5930998530277" target="_blank">
+<i style="margin-top:16px" class="fas fa-phone"></i>
+
+</a>
+  </div>
+
+
 
 
   <!-- Titulo de la seccion  -->
@@ -233,6 +246,12 @@
   });
 });
 
+ </script>
+ <script>
+     function fecharwhastb() {
+  var x = document.getElementById("msg");
+    x.style.display = "none";
+}
  </script>
 {% endblock contenido %}
 </body>
