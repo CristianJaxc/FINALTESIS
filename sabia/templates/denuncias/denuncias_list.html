@@ -1,9 +1,5 @@
 {% extends "administracion/usuarios/plantilla_tablas.html" %}
 {% load static %}
-{% block tema %}
-Detalle Denuncias
- {% endblock tema %}
- {% block title %}Perfil de Usuario  {% endblock title  %} 
 
 <body>
     <!-- <h1>PAgina de denuncias</h1>
@@ -12,6 +8,11 @@ Detalle Denuncias
     <li><a href="{% url 'pagina' %}">dashboard</a></li>
     <br>
     <hr> -->
+    {% block tema %}
+Detalle Denuncias
+ {% endblock tema %}
+ {% block title %}Perfil de Usuario  {% endblock title  %}
+
     {% block tablas %}
 
 
@@ -72,14 +73,13 @@ Detalle Denuncias
             
             
             </td>
-        </tr>
-        {% endfor %}
 
-       {% if user.is_superuser %}
+
+    <!--   {% if user.is_superuser %}
        {% else %}
-       {% endif %}
-   </tr>
-   
+       {% endif %}-->
+
+     {% endfor %}
     {% endblock tbody  %}
     {% endblock tablas %}
 
