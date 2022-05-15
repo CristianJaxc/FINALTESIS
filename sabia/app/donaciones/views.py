@@ -178,5 +178,10 @@ class Eliminar_solicitud(DeleteView):
         context = super(Eliminar_solicitud, self).get_context_data(**kwargs)
         context['action']='eliminar'
         context['list_url']=reverse_lazy('listado_solicitudes_donaciones')
-        return context 
+        return context
+
+# ------------------ APADRINAMIENTO :::  -------------------
+def Pagina_apdrinamiento(request):
+    productos = Productos.objects.all().order_by('id')
+    return render(request, 'donaciones/pagina_apadrinamiento.html',{'productos':productos})
 

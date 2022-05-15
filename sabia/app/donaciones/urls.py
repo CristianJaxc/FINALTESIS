@@ -13,6 +13,8 @@ urlpatterns = [
     path('registrar_producto/',Registrar_Producto.as_view(),name='registrar_producto'),
     path('editar_producto/<int:pk>', Editar_Producto.as_view(), name='editar_producto'),
     path('eliminar_producto/<int:pk>', Eliminar_donacion.as_view(), name='eliminar_producto'),
+    # !-------------------------- APADRINAMIENTO : ----------------------------------------
+    path('pagina_apadrinamiento/', views.Pagina_apdrinamiento, name='pagina_apadrinamiento'),
 
 
     #!-------------------------- Solicitudes ---------------------------------------

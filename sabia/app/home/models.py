@@ -11,3 +11,5 @@ class Contactos(models.Model):
     direccion= models.CharField(max_length=100,blank=True, verbose_name="Direccion")
     estado = models.BooleanField(default=False)
     descripcion = models.TextField(blank=True, verbose_name='Descripcion')
+
+

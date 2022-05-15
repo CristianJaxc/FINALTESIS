@@ -215,8 +215,12 @@
     <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Servicios</a>
                 <div class="dropdown-menu m-0">
-                    <a href="" class="dropdown-item">Tienda SABIA </a>
-                    <a href="" class="dropdown-item">Esterilizacion</a>
+<!--
+                    <a href="{% url 'pagina_productos' %}"class="dropdown-item">Tienda SABIA </a>
+-->
+                      <a href="{% url 'product_list' %}"class="dropdown-item">Tienda SABIA </a>
+
+                    <a href="{% url 'pagina_esterilizacion' %}" class="dropdown-item">Esterilizacion</a>
 
                 </div>
             </div>
@@ -227,7 +231,7 @@
                   <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Donaciones</a>
                 <div class="dropdown-menu m-0">
-                    <a href="" class="dropdown-item">Apadrinamiento </a>
+                    <a href="{% url 'pagina_apadrinamiento' %}"class="dropdown-item">Apadrinamiento </a>
                     <a href="{% url 'pagina_donaciones' %}" class="dropdown-item">Donaciones Directas</a>
 
                 </div>
@@ -242,7 +246,33 @@
     </div>
 </nav>
 <!-- Navbar End -->
+  {% if cart|length <= 0 %}
 
+   {% else %}
+    <div class="" style="padding:1%;background-color:yellow;text-align:center">
+
+
+      {% with total_items=cart|length %}
+        {% if cart|length > 0 %}
+            Revisa tu carrito de Compra , tienes :
+        <li class="fas fa-shopping-cart">
+             <a href="{% url 'cart_detail' %}" style="color:black">
+                {{ total_items }} Producto{{ total_items|pluralize }},
+                ${{ cart.get_total_price }}
+            </a>
+
+        </li>
+
+        {% else %}
+          No tiene Datos
+        {% endif %}
+    {% endwith %}
+
+
+                </div>
+
+
+        {% endif %}
 
 
 

@@ -15,6 +15,8 @@ from app.usuario.models import Perfil
 from app.denuncias.models import Denuncias
 from app.home.models import Contactos
 from app.adopciones.models import Perros
+from app.servicios.models import  Category,Product
+from app.cart import cart
 from app.donaciones.models import *
 from app.usuario.models import *
 
@@ -49,7 +51,8 @@ def index(request):
             'donaciones':Productos.objects.all(),
             'voluntariado':Perfil.objects.all(),
              'denuncias':Denuncias.objects.all(),
-                   'mascotas':Perros.objects.all(),
+            'mascotas':Perros.objects.all(),
+
                 }
 
         

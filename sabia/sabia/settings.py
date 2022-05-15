@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from django.contrib.messages import  constants as message_constants
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -44,6 +45,9 @@ INSTALLED_APPS = [
     'app.adopciones',
     'app.donaciones',
     'app.blogs',
+    'app.servicios',
+    'app.cart',
+    'app.orders',
     'pwa',
 ]
 
@@ -56,6 +60,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+#TOMA DE SECION :
+
+CART_SESSION_ID = 'cart'
 
 ROOT_URLCONF = 'sabia.urls'
 
@@ -70,6 +77,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'app.cart.context_processors.cart',
             ],
         },
     },
@@ -83,6 +91,7 @@ WSGI_APPLICATION = 'sabia.wsgi.application'
 
 DATABASES = {
     'default': {
+
 
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': 'SabiaFinalDB',
@@ -151,6 +160,14 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
+#PARA LOS MENSAJES DE BOOSTRAP
+MESSAGE_TAGS={
+    message_constants.DEBUG: 'debug',
+    message_constants.INFO: 'info',
+    message_constants.SUCCESS: 'success',
+    message_constants.WARNING: 'warning',
+    message_constants.ERROR: 'danger',
+}
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'

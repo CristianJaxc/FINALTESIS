@@ -17,6 +17,9 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls.static import static
 from django.conf import settings
+
+from django.conf.urls import url, include
+
 from django.utils.translation import gettext_lazy as _
 
 from django.conf.urls.i18n import i18n_patterns
@@ -29,6 +32,10 @@ urlpatterns = [
     path('adopciones/',  include('app.adopciones.urls')),
     path('donaciones/',  include('app.donaciones.urls')),
     path('blogs/',  include('app.blogs.urls')),
+    #path('servicios/', include('app.servicios.urls')),
+    url('servicios/', include('app.servicios.urls')),
+    url(r'^cart/', include('app.cart.urls')),
+    url(r'orders/', include('app.orders.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('i18n/', include("django.conf.urls.i18n")),
     path('',include('pwa.urls')),
