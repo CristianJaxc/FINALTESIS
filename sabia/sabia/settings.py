@@ -48,6 +48,10 @@ INSTALLED_APPS = [
     'app.servicios',
     'app.cart',
     'app.orders',
+    #'app.payment',
+    'crispy_forms',
+    'paypal.standard.ipn',
+
     'pwa',
 
 ]
@@ -62,7 +66,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 #TOMA DE SECION :
-
+CRISPY_TEMPLATE_PACK = 'uni_form'
 CART_SESSION_ID = 'cart'
 
 ROOT_URLCONF = 'sabia.urls'
@@ -92,6 +96,7 @@ WSGI_APPLICATION = 'sabia.wsgi.application'
 
 DATABASES = {
     'default': {
+
 
 
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -161,8 +166,12 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
+
+PAYPAL_RECEIVER_EMAIL = 'sb-unzpk9185264@business.example.com'
+PAYPAL_TEST = True
+
 #PARA LOS MENSAJES DE BOOSTRAP
-MESSAGE_TAGS={
+MESSAGE_TAGS ={
     message_constants.DEBUG: 'debug',
     message_constants.INFO: 'info',
     message_constants.SUCCESS: 'success',
