@@ -57,7 +57,3 @@ class Product(models.Model):
 
 
 
-class ImagenProducto(models.Model):
-
-    image = models.ImageField(upload_to='products/%Y/%m/%d', blank=True)
-    producto = models.ForeignKey(Product, related_name='imagenes', on_delete=models.CASCADE, )

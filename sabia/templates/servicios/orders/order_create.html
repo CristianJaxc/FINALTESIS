@@ -2,97 +2,14 @@
 {% block titulo %} Tienda SABIA {% endblock %}
 
 {% load static %}
-{% load crispy_forms_tags %}
+
 {% block contenido %}
-<style>
-    .asteriskField {
-display: none;
-}
-</style>
+<h1>Checkout</h1>
 
-
-<div class="container-fluid py-5">
-<div class="row ">
-    <div class="col-xl-4 col-lg-6 wow slideInUp" data-wow-delay="0.1s">
-        <div class="bg-light rounded h-100 p-5">
-            <div class="section-title">
-
-                <h1 class="display-6 mb-2" style="text-align:center;">Detalles</h1>
-            </div>
-
-
-            <table class="table">
-
-                 <thead>
-                    <tr>
-                      <th scope="col">Producto</th>
-                      <th scope="col">Nombre</th>
-                      <th scope="col">cantidad</th>
-                      <th scope="col">Precio</th>
-                    </tr>
-                     </thead>
-                <tbody>
-                  {% for item in cart %}
-                <tr>
-                    <th>
-                          {% if item.product.image %}
-                <br/>
-                <img src="/media/{{item.product.image}}" alt="{{product.image}}"  class="img-fluid" width="100%">
-                {% else %}
-                <img src="{% static 'imagenes/adopciones/adop1.jpg'  %}" >
-                {% endif %}
-                    </th>
-                                <th>
-   <h5>   {{ item.product.name }}    </h5>
-                    </th>
-
-
-                    <th>
-   <h5>   {{ item.quantity }}   </h5>
-                    </th>
-
-
-                    <th>
-   <h5> ${{ item.total_price }}  </h5>
-                    </th>
-                </tr>
-                   {% endfor %}
-                </tbody>
-
-            </table>
-
-
-
-                   <span class="col">Total: ${{ cart.get_total_price }}</span>
-        </div>
-    </div>
-    <div class="col-xl-4 col-lg-6 wow slideInUp" data-wow-delay="0.3s">
-        <div class="container">
-                  <form action="." method="post" class="uniForm" >
-            <div class="row g-3">
-                <div class="col-12">
-                    <h2>Formulario de Compra </h2>
-            {% csrf_token %}
-            {{ form|crispy }}
-            <button class="btn btn-primary w-100 py-3" type="submit" value="enviar consulta">Comprar  </button>
-
-                </div>
-            </div>
-        </form>
-        </div>
-
-    </div>
-
-</div>
-
-</div>
-
-<!--
-
-<div class="row" >
-      <div class="col-md-3 col-sm-12 col-lg-4 wow fadeIn" data-wow-delay="0.2s">
- {% for item in cart %}
-          <ul>
+    <div class="order-info">
+        <h3>Your order</h3>
+        <ul>
+            {% for item in cart %}
                 <li>
                     {{ item.quantity }}x {{ item.product.name }}
                     <span>${{ item.total_price }}</span>
@@ -100,27 +17,12 @@ display: none;
             {% endfor %}
         </ul>
         <p>Total: ${{ cart.get_total_price }}</p>
+    </div>
 
-      </div>
-      <div class="col-lg-8" style="border-style:solid;border-color:black;">
-
-    <form action="." method="post" >
-          <div class="form-group">
-
-        {{ form.as_p}}
-        <p><input type="submit" value="Comprar"></p>
+    <form action="." method="post" class="order-form">
+        {{ form.as_p }}
+        <p><input type="submit" value="Place order"></p>
         {% csrf_token %}
-              </div>
     </form>
-
-          </div>
-</div>
-
--->
-
-
-
-
-
 
 {% endblock %}

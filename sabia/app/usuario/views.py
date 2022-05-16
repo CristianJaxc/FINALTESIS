@@ -36,9 +36,13 @@ from app.blogs.forms import BlogsForm, BlogsForm2
 # Create your views here.
 
 
+
+
+
+
 @method_decorator(login_required, name='dispatch')
 class volunView(SuccessMessageMixin, generic.CreateView):
-
+ 
     def userlog(request):
       
       
@@ -56,6 +60,9 @@ class volunView(SuccessMessageMixin, generic.CreateView):
     form_class = PerfilForm
     # success forms
     template_name = 'voluntarios/perfil_volun.html'
+  
+
+
     success_url = reverse_lazy('pagina')
 
     def get_context_data(self, **kwargs): #pinto el formulario en el html

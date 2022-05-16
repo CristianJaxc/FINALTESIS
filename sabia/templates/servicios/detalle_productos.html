@@ -353,22 +353,18 @@ section {
             <div class="col-md-6 _boxzoom">
                <div class="zoom-thumb">
                   <ul class="piclist">
-
-                        {% for p in product.imagenes.all %}
-
-                   <li><img
-                             src="{% if p.image %}
-                             {{ p.image.url }}
-                             {% else %}
-                             {% static 'shop/img/no_image.png' %}
-                             {% endif %}"
-                             alt="{{ p.imagenes.url }}">
+                     <li><img
+                             src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'shop/img/no_image.png' %}{% endif %}">
                      </li>
-
-
-
-  {% endfor %}
-
+                     <li><img
+                             src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'shop/img/no_image.png' %}{% endif %}">
+                     </li>
+                     <li><img
+                             src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'shop/img/no_image.png' %}{% endif %}">
+                     </li>
+                     <li>
+                        <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'shop/img/no_image.png' %}{% endif %}">
+                     </li>
 
                   </ul>
                </div>

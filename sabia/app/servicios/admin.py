@@ -1,13 +1,4 @@
 from django.contrib import admin
-from .models import Category,Product,ImagenProducto
+from .models import Category,Product
 # Register your models here.
-class ImagenProductoAdmin(admin.TabularInline):
-    model = ImagenProducto
-
-class ProductAdmin(admin.ModelAdmin):
-
-    inlines = [
-        ImagenProductoAdmin
-    ]
-admin.site.register(Product,ProductAdmin)
-admin.site.register([Category])
+admin.site.register([Category,Product])
