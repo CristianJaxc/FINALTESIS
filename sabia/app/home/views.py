@@ -59,7 +59,7 @@ def index(request):
             return render(request,"home/index.html",data) 
 
    
-
+@login_required(login_url='/accounts/login')
 def prueba(request):
     usuario=request.user.id
     datos=User.objects.get(id=usuario)
